@@ -1,0 +1,27 @@
+{
+  "name": "bucket-ts-folder",
+  "version": "0.0.1",
+  "author": "ian.b.taylor@gmail.com",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build-schema": "ts-json-schema-generator --path 'types.ts' --type 'FolderBucketOptions' > optionsSchema.json",
+    "build": "yarn build-schema && tsc"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^1.0.1",
+    "@types/node": "^14.0.13",
+    "@types/recursive-readdir": "^2.2.0",
+    "bucket-ts": "portal:../bucket-ts",
+    "ts-json-schema-generator": "^0.70.1",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "recursive-readdir": "^2.2.2"
+  },
+  "peerDependencies": {
+    "bucket-ts": "*"
+  }
+}

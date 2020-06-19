@@ -1,0 +1,28 @@
+{
+  "name": "bucket-ts-test",
+  "private": true,
+  "author": "ian.b.taylor@gmail.com",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --require ./testLoader.js --ui jest *.test.ts"
+  },
+  "dependencies": {
+    "bucket-ts": "portal:../packages/bucket-ts",
+    "bucket-ts-folder": "link:../packages/bucket-ts-folder",
+    "bucket-ts-gcs": "link:../packages/bucket-ts-gcs"
+  },
+  "devDependencies": {
+    "@types/mkdirp": "^1.0.1",
+    "@types/node": "^14.0.13",
+    "@types/rimraf": "^3.0.0",
+    "mkdirp": "^1.0.4",
+    "mocha": "^8.0.1",
+    "mocha-ui-jest": "^0.3.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  }
+}

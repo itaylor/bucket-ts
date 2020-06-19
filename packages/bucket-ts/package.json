@@ -1,0 +1,17 @@
+{
+  "name": "bucket-ts",
+  "version": "0.0.1",
+  "author": "ian.b.taylor@gmail.com",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "ajv": "^6.12.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.5"
+  }
+}
