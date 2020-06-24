@@ -13,51 +13,57 @@ const unlinkAsync = promisify(unlink);
 
 export class FolderBucketProvider implements BucketProvider {
   private rootFolder: string;
-  constructor (options: any) {
+  private bucketName: string;
+  constructor (bucketName: string, options: any) {
     this.rootFolder = resolve((<FolderBucketOptions> options).folderPath);
+    this.bucketName = bucketName;
   }
 
   getBaseUrl() {
-    return this.rootFolder;
+    return join(this.rootFolder, this.bucketName);
   }
 
-  async uploadFile(bucketName: string, filePath: string, destination?: string): Promise<BucketProviderResponse> {
-    if (!bucketName || !filePath) {
+  getBucketName() {
+    return this.bucketName;
+  }
+
+  async uploadFile(filePath: string, destination?: string): Promise<BucketProviderResponse> {
+    if (!this.bucketName || !filePath) {
       throw new Error('Invalid parameters');
     }
     let filename = destination || basename(filePath);
     if (destination && destination.includes('/')) {
-      mkdirp.sync(join(this.rootFolder, bucketName, dirname(destination)));
+      mkdirp.sync(join(this.rootFolder, this.bucketName, dirname(destination)));
     }
     let source = createReadStream(filePath);
     let dest = createWriteStream(
-      join(this.rootFolder, bucketName, filename)
+      join(this.rootFolder, this.bucketName, filename)
     );
 
     const ok = await readStreamToEnd(source, dest);
     return {
       ok,
-      message: `File "${filePath}" was uploaded successfully to bucket "${bucketName}"`,
+      message: `File "${filePath}" was uploaded successfully to bucket "${this.bucketName}"`,
     }
   }
 
-  async downloadFile(bucketName:string, remoteFilename: string, downloadedFilePath: string): Promise<BucketProviderResponse> {
-    if (!bucketName || !remoteFilename || !downloadedFilePath) {
+  async downloadFile(remoteFilename: string, downloadedFilePath: string): Promise<BucketProviderResponse> {
+    if (!this.bucketName || !remoteFilename || !downloadedFilePath) {
       throw new Error('Invalid parameters');
     }
     let source = createReadStream(
-      join(this.rootFolder, bucketName, remoteFilename)
+      join(this.rootFolder, this.bucketName, remoteFilename)
     );
     let dest = createWriteStream(downloadedFilePath);
     const ok = await readStreamToEnd(source, dest);
     return {
       ok,
-      message: `File "${remoteFilename}" was downloaded successfully from bucket "${bucketName}"`,
+      message: `File "${remoteFilename}" was downloaded successfully from bucket "${this.bucketName}"`,
     }
   };
 
-  async listFiles(bucketName: string, options: BucketProviderListFileOptions = {}): Promise<BucketProviderListResponse> {
-    const path = join(this.rootFolder, bucketName);
+  async listFiles(options: BucketProviderListFileOptions = {}): Promise<BucketProviderListResponse> {
+    const path = join(this.rootFolder, this.bucketName);
     let files: Array<string>;
     const { prefix, maxReturn } = options;
     if (prefix) {
@@ -83,12 +89,12 @@ export class FolderBucketProvider implements BucketProvider {
     }
   }
 
-  async deleteFile(bucketName: string, filename: string): Promise<BucketProviderResponse> {
-    const path = join(this.rootFolder, bucketName, filename);
+  async deleteFile(filename: string): Promise<BucketProviderResponse> {
+    const path = join(this.rootFolder, this.bucketName, filename);
     await unlinkAsync(path);
     return {
       ok: true,
-      message: `File "${filename}" was deleted successfully from bucket "${bucketName}"`
+      message: `File "${filename}" was deleted successfully from bucket "${this.bucketName}"`
     };
   }
 

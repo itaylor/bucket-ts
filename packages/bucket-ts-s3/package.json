@@ -1,0 +1,25 @@
+{
+  "name": "bucket-ts-s3",
+  "version": "0.0.1",
+  "author": "ian.b.taylor@gmail.com",
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build-schema": "ts-json-schema-generator --path 'types.ts' --type 'S3BucketOptions' > optionsSchema.json",
+    "build": "yarn build-schema && tsc"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^14.0.13",
+    "bucket-ts": "portal:../bucket-ts",
+    "ts-json-schema-generator": "^0.70.1",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "bucket-ts": "*"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.702.0"
+  }
+}

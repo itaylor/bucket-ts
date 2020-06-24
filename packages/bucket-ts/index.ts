@@ -10,7 +10,7 @@ export function registerBucketProvider(name: string, provider: BucketProviderCto
   schemas[name] = ajv.compile(provider.getOptionsSchema());
 }
 
-export default function getBucketProvider(name: string, options: any) : BucketProvider {
+export default function getBucketProvider(name: string, bucketName: string, options: any) : BucketProvider {
   const provider = providers[name];
   if (!provider) {
     throw new Error(`No bucket-ts provider named \`${name}\` registered.  You may need to import a bucket provider eg: \`import 'bucket-ts-gcs';\``);
@@ -20,5 +20,5 @@ export default function getBucketProvider(name: string, options: any) : BucketPr
   if (!valid) {
     throw new Error(`Invalid options passed to bucket-ts provider \`${name}\`: ${validateFn.errors}`);
   }
-  return new provider(options); 
+  return new provider(bucketName, options); 
 }

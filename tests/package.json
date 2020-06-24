@@ -12,7 +12,8 @@
   "dependencies": {
     "bucket-ts": "portal:../packages/bucket-ts",
     "bucket-ts-folder": "link:../packages/bucket-ts-folder",
-    "bucket-ts-gcs": "link:../packages/bucket-ts-gcs"
+    "bucket-ts-gcs": "link:../packages/bucket-ts-gcs",
+    "bucket-ts-s3": "link:../packages/bucket-ts-s3"
   },
   "devDependencies": {
     "@types/mkdirp": "^1.0.1",

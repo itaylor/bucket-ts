@@ -10,7 +10,7 @@ export type BucketProviderListResponse = {
 }
 
 export interface BucketProviderCtor {
-  new (options: any): BucketProvider;
+  new (bucketName:string, options: any): BucketProvider;
   getOptionsSchema(): object;
 }
 
@@ -21,8 +21,9 @@ export interface BucketProviderListFileOptions {
 
 export interface BucketProvider {
   getBaseUrl(): string;
-  uploadFile(bucketName: string, filePath: string, destination?: string): Promise<BucketProviderResponse>;
-  downloadFile(bucketName: string, remoteFilename: string, downloadedFilePath: string): Promise<BucketProviderResponse>;
-  deleteFile(bucketName: string, remoteFilename: string ): Promise<BucketProviderResponse>;
-  listFiles(bucketName: string, options: BucketProviderListFileOptions): Promise<BucketProviderListResponse>;
+  getBucketName(): string;
+  uploadFile(filePath: string, destination?: string): Promise<BucketProviderResponse>;
+  downloadFile(remoteFilename: string, downloadedFilePath: string): Promise<BucketProviderResponse>;
+  deleteFile(remoteFilename: string): Promise<BucketProviderResponse>;
+  listFiles(options: BucketProviderListFileOptions): Promise<BucketProviderListResponse>;
 }
