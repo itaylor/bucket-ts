@@ -1,12 +1,12 @@
 
 export type BucketProviderResponse = {
-  ok: boolean,
   message?: string,
 }
 export type BucketProviderListResponse = {
-  ok: boolean,
+  complete: boolean,
   message?: string,
-  filePaths: Array<string>,
+  results: Array<string>,
+  paginator: BucketProviderPaginator,
 }
 
 export interface BucketProviderCtor {
@@ -15,8 +15,13 @@ export interface BucketProviderCtor {
 }
 
 export interface BucketProviderListFileOptions {
-  maxReturn?: number,
+  paginator?: BucketProviderPaginator,
   prefix?: string,
+}
+
+export type BucketProviderPaginator = {
+  maxReturn: number,
+  pageOffsetId?: string,
 }
 
 export interface BucketProvider {
@@ -26,4 +31,8 @@ export interface BucketProvider {
   downloadFile(remoteFilename: string, downloadedFilePath: string): Promise<BucketProviderResponse>;
   deleteFile(remoteFilename: string): Promise<BucketProviderResponse>;
   listFiles(options: BucketProviderListFileOptions): Promise<BucketProviderListResponse>;
+}
+
+export interface BucketProviderExt extends BucketProvider { 
+  uploadFolder(folderPath:string, destination?: string): Promise<BucketProviderResponse>;
 }

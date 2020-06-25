@@ -1,4 +1,4 @@
-import { BucketProvider, BucketProviderResponse, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
+import { BucketProvider, BucketProviderResponse, BucketProviderPaginator, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
 import { resolve, join, dirname, basename, relative } from 'path';
 import { Stream } from 'stream';
 import { WriteStream, createWriteStream, createReadStream, unlink, Stats } from 'fs';
@@ -40,9 +40,8 @@ export class FolderBucketProvider implements BucketProvider {
       join(this.rootFolder, this.bucketName, filename)
     );
 
-    const ok = await readStreamToEnd(source, dest);
+    await readStreamToEnd(source, dest);
     return {
-      ok,
       message: `File "${filePath}" was uploaded successfully to bucket "${this.bucketName}"`,
     }
   }
@@ -57,7 +56,6 @@ export class FolderBucketProvider implements BucketProvider {
     let dest = createWriteStream(downloadedFilePath);
     const ok = await readStreamToEnd(source, dest);
     return {
-      ok,
       message: `File "${remoteFilename}" was downloaded successfully from bucket "${this.bucketName}"`,
     }
   };
@@ -65,7 +63,10 @@ export class FolderBucketProvider implements BucketProvider {
   async listFiles(options: BucketProviderListFileOptions = {}): Promise<BucketProviderListResponse> {
     const path = join(this.rootFolder, this.bucketName);
     let files: Array<string>;
-    const { prefix, maxReturn } = options;
+    const paginator: BucketProviderPaginator = options.paginator || { maxReturn: 1000, pageOffsetId: '0' };
+    const { prefix } = options;
+    const { maxReturn } = paginator;
+    const offset = paginator.pageOffsetId ? parseInt(paginator.pageOffsetId) : 0;
     if (prefix) {
       const ignoreFunc = (file: string, stats: Stats) => {
         if (stats.isDirectory()) {
@@ -74,18 +75,26 @@ export class FolderBucketProvider implements BucketProvider {
         const relFile = relative(path, file);
         return !relFile.startsWith(prefix);
       };
+      // todo: eliminate `recursive` dependency.  
+      // Stop fetching recursively when we hit maxReturn.
       files = await recursive(path, [ignoreFunc]);
     } else {
       files = await recursive(path);
     }
-
-    if (maxReturn && files.length > maxReturn) {
-      files = files.slice(0, maxReturn);
+    // recursive-readdir evidently doesn't sort things in a stable order?  More reason to replace it.
+    let filePaths = files.map<string>((f) => relative(path, f)).sort();
+    const endIndex = maxReturn + offset;
+    const hasMore = endIndex < files.length;
+    if (files.length > maxReturn) {
+      filePaths = filePaths.slice(offset, maxReturn + offset);
     }
-    const filePaths = files.map<string>((f) => relative(path, f));
     return {
-      ok: true,
-      filePaths,
+      complete: !hasMore,
+      results: filePaths,
+      paginator: {
+        maxReturn,
+        pageOffsetId: hasMore ? `${endIndex}` : undefined,
+      }
     }
   }
 
@@ -93,7 +102,6 @@ export class FolderBucketProvider implements BucketProvider {
     const path = join(this.rootFolder, this.bucketName, filename);
     await unlinkAsync(path);
     return {
-      ok: true,
       message: `File "${filename}" was deleted successfully from bucket "${this.bucketName}"`
     };
   }

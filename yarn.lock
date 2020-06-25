@@ -300,6 +300,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^14.0.14":
+  version: 14.0.14
+  resolution: "@types/node@npm:14.0.14"
+  checksum: 0a2072aa7de32e6535ce6bc7383965fc0a4b7bbf6d76f69027db72e86381921c820a8a2173f75fa210d9fb3286c707079d3804ef33c76a065bcb890858e50ee9
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.0
   resolution: "@types/normalize-package-data@npm:2.4.0"
@@ -889,6 +896,7 @@ __metadata:
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-folder%40workspace%3Apackages%2Fbucket-ts-folder"
   dependencies:
     ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
     typescript: ^3.9.5
   languageName: node
   linkType: soft
@@ -898,6 +906,7 @@ __metadata:
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-gcs%40workspace%3Apackages%2Fbucket-ts-gcs"
   dependencies:
     ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
     typescript: ^3.9.5
   languageName: node
   linkType: soft
@@ -907,6 +916,7 @@ __metadata:
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-s3%40workspace%3Apackages%2Fbucket-ts-s3"
   dependencies:
     ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
     typescript: ^3.9.5
   languageName: node
   linkType: soft
@@ -916,6 +926,7 @@ __metadata:
   resolution: "bucket-ts@portal:../packages/bucket-ts::locator=bucket-ts-test%40workspace%3Atests"
   dependencies:
     ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
     typescript: ^3.9.5
   languageName: node
   linkType: soft
@@ -924,7 +935,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@workspace:packages/bucket-ts"
   dependencies:
+    "@types/node": ^14.0.14
+    "@types/recursive-readdir": ^2.2.0
     ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
     typescript: ^3.9.5
   languageName: unknown
   linkType: soft

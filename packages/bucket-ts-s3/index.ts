@@ -1,5 +1,5 @@
 import { S3 } from 'aws-sdk';
-import { BucketProvider, BucketProviderResponse, registerBucketProvider, BucketProviderListFileOptions, BucketProviderListResponse } from 'bucket-ts';
+import { BucketProvider, BucketProviderResponse, BucketProviderPaginator, registerBucketProvider, BucketProviderListFileOptions, BucketProviderListResponse } from 'bucket-ts';
 import { basename } from 'path';
 import { createReadStream, statSync, createWriteStream } from 'fs';
 import { S3BucketOptions } from './types';
@@ -54,7 +54,6 @@ export class S3BucketProvider implements BucketProvider {
       Body: createReadStream(filePath),
     }, options).promise();
     return {
-      ok: true,
       message: `File "${result.Key}" was uploaded successfully to bucket "${result.Bucket}"`,
     };
   }
@@ -67,21 +66,27 @@ export class S3BucketProvider implements BucketProvider {
     const dest = createWriteStream(downloadedFilePath);
     await readStreamToEnd(src, dest);
     return {
-      ok: true,
       message: `File "${remoteFilename}" was downloaded successfully from bucket "${this.bucketName}"`,
     }
   };
 
   async listFiles(options: BucketProviderListFileOptions): Promise<BucketProviderListResponse> {
+    const paginator: BucketProviderPaginator = options.paginator || { maxReturn: 1000 };
     const results = await this.s3.listObjectsV2({
       Bucket: this.bucketName,
       Prefix: options.prefix,
-      MaxKeys: options.maxReturn,      
+      MaxKeys: paginator.maxReturn,
+      ContinuationToken: paginator.pageOffsetId,
     }).promise();
+    results.NextContinuationToken
     
     return {
-      ok: true,
-      filePaths: results?.Contents?.map(obj => obj.Key || '') || [],
+      complete: !results.NextContinuationToken,
+      results: results?.Contents?.map(obj => obj.Key || '') || [],
+      paginator: {
+        maxReturn: paginator.maxReturn,
+        pageOffsetId: results.NextContinuationToken,       
+      }
     };
   }
 
@@ -92,7 +97,6 @@ export class S3BucketProvider implements BucketProvider {
     }).promise();
 
     return {
-      ok: true,
       message: `File "${remoteFilename}" was deleted successfully from bucket "${this.bucketName}"`,
     }
   }

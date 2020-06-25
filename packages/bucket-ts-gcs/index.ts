@@ -31,7 +31,6 @@ export class GCSBucketProvider implements BucketProvider {
     destination = destination || basename(filePath);
     await this.bucket.upload(filePath, { destination });
     return {
-      ok: true,
       message: `File "${filePath}" was uploaded successfully to bucket "${this.bucket.name}"`,
     }
   }
@@ -40,18 +39,27 @@ export class GCSBucketProvider implements BucketProvider {
     let file = this.bucket.file(remoteFilename);
     await file.download({ destination: downloadedFilePath });
     return {
-      ok: true,
       message: `File "${remoteFilename}" was downloaded successfully from bucket "${this.bucket.name}"`,
     }
   };
 
   async listFiles(options: BucketProviderListFileOptions): Promise<BucketProviderListResponse> {
-    const [ results ] = await this.bucket.getFiles({
+    const paginator = options.paginator || { maxReturn: 1000 }; 
+    const getFilesResponse = await this.bucket.getFiles({
       prefix: options.prefix,
+      maxResults: paginator.maxReturn,
+      pageToken: paginator.pageOffsetId,
     });
+    const [ results, extra ] = getFilesResponse;
+    // @ts-ignore
+    const pageOffsetId = extra?.pageToken;
     return {
-      ok: true,
-      filePaths: results.map((f: File) => f.name),
+      complete: !pageOffsetId,
+      results: results.map((f: File) => f.name),
+      paginator: {
+        maxReturn: paginator.maxReturn,
+        pageOffsetId,
+      }
     };
   }
 
@@ -59,7 +67,6 @@ export class GCSBucketProvider implements BucketProvider {
     const file = this.bucket.file(remoteFilename);
     await file.delete();
     return {
-      ok: true,
       message: `File "${remoteFilename}" was deleted successfully from bucket "${this.bucket.name}"`,
     }
   }

@@ -1,6 +1,7 @@
 # Bucket-TS
 
-A strongly typed abstraction over several 'bucket' type object stores like AWS and GCS.
+* Simple, consistent, strongly-typed bucket storage client
+
 
 ## Goals
 * Consistent interface between bucket providers, with strong Typescript support
@@ -25,8 +26,8 @@ Somewhere in your code you'll need to do the following:
 import bucketTs from 'bucket-ts'
 import 'bucket-ts-gcs'
 
-const bucketApi = bucketTs('gcs', { keyFilename: `path/to/a/gcs/keyfile.json` });
-await bucketApi.uploadFile('nameOfMyBucket', 'fileToUpload.txt', 'name/of/file/in/bucket.txt');
+const bucketApi = bucketTs('gcs', 'nameOfMyBucket', { keyFilename: `path/to/a/gcs/keyfile.json` });
+await bucketApi.uploadFile('fileToUpload.txt', 'name/of/file/in/bucket.txt');
 
 ```
 
