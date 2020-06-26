@@ -22,6 +22,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: yarn -v
     - run: yarn set version berry
     - run: yarn
     - run: yarn run build
