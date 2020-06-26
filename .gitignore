@@ -1,5 +1,7 @@
 build/
 yarn-error.log
-.yarn
-.pnp.js
 .vscode
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
