@@ -1,5 +1,5 @@
 import 'mocha-ui-jest';
-import getBucketProvider, { BucketProviderExt } from 'bucket-ts';
+import getBucketProvider, { BucketProviderExt, BucketProviderOptions } from 'bucket-ts';
 import rimraf from 'rimraf';
 import mkdirp from 'mkdirp';
 import fs from 'fs';
@@ -12,32 +12,34 @@ import gcsOptions from './config/gcs-config.json';
 import minioOptions from './config/minio-config.json';
 import s3Options from './config/s3-config.json';
 
-let providers: { [key: string]: BucketProviderExt } = {};
-  
+const providers: { [key: string]: { name: string, options: BucketProviderOptions } } = {
+  folder: { name: 'folder', options: folderOptions },
+  gcs: { name: 'gcs', options: gcsOptions },
+  s3: { name: 's3', options: s3Options },
+  minio: { name: 's3', options: minioOptions }
+};
+
 describe('bucketProviders', () => {
   Object.keys(providers).forEach(key => {
-    beforeAll(async () => {
-      providers = {
-        folder: await getBucketProvider('folder', folderOptions),
-        gcs: await getBucketProvider('gcs', gcsOptions),
-        s3: await getBucketProvider('s3', s3Options),
-        minio: await getBucketProvider('s3', minioOptions)
-      }
+    describe(`bucketProvider ${key}`, () => {
+      let bp: BucketProviderExt;
+      beforeEach(async () => {
+        const { name, options } = providers[key]; 
+        bp = await getBucketProvider(name, options);
+        rimraf.sync('junk');
+        mkdirp.sync('junk');
+      })
+      afterEach(() => {
+        rimraf.sync('junk');
+      });
+      test(`Basic crud on files with ${key}`, async () => {
+        await uploadListDownloadListDelete(bp);
+      });
+      test(`Pagination on listFiles with ${key}`, async () => {
+        await listFilesPagination(bp);
+      });
     });
-    beforeEach(() => {
-      rimraf.sync('junk');
-      mkdirp.sync('junk');
-    })
-    afterEach(() => {
-      rimraf.sync('junk');
-    });
-    test(`Basic crud on files with ${key}`, async () => {
-      await uploadListDownloadListDelete(providers[key]);
-    });
-    test(`Pagination on listFiles with ${key}`, async () => {
-      await listFilesPagination(providers[key]);
-    });
-  });
+});
 });
 
 async function uploadListDownloadListDelete(bp: BucketProviderExt) {
