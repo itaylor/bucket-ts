@@ -1,0 +1,15 @@
+{
+  "inputFiles": [
+    "packages/bucket-ts",
+    "packages/bucket-ts-folder",
+    "packages/bucket-ts-s3",
+    "packages/bucket-ts-gcs"
+  ],
+  "mode": "library",
+  "out": "doc",
+  "exclude": [
+    ".yarn/**",
+    "test/*",
+    "test/**"
+  ]
+}

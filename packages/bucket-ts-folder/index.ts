@@ -1,7 +1,7 @@
-import { BucketProvider, BucketProviderOptions, BucketProviderResponse, BucketProviderPaginator, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
+import { BucketProvider, BucketProviderResponse, BucketProviderPaginator, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
 import { resolve, join, dirname, basename, relative } from 'path';
 import { Stream } from 'stream';
-import { WriteStream, createWriteStream, createReadStream, unlink, Stats, fstat, statSync } from 'fs';
+import { WriteStream, createWriteStream, createReadStream, unlink, Stats, statSync } from 'fs';
 import mkdirp from 'mkdirp';
 import { FolderBucketOptions } from './types';
 import optionsSchema from './optionsSchema.json';
@@ -11,6 +11,11 @@ import recursive from 'recursive-readdir';
 
 const unlinkAsync = promisify(unlink);
 
+/**
+ * A bucket provider that uses the local filesystem instead of a "real" object store.
+ * 
+ * This is incredibly useful for testing scenarios, as you can mimic the behavior of calls that would normally be remote, locally, without installing any additional software.
+ */
 export class FolderBucketProvider implements BucketProvider {
   private rootFolder: string;
   private bucketName: string;

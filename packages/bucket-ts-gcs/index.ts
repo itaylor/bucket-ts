@@ -6,6 +6,9 @@ import { GCSBucketOptions } from './types';
 
 export * from './types';
 
+/**
+ * A bucket provider for Google Cloud Storage (GCS)
+ */
 export class GCSBucketProvider implements BucketProvider {
   private storage: Storage;
   private bucket: Bucket;

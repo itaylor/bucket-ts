@@ -8,6 +8,9 @@ import stream from 'stream';
 
 export * from './types';
 
+/** 
+ * A bucket provider for Amazon S3 and other S3-compatible object stores (like minio)
+ */
 export class S3BucketProvider implements BucketProvider {
   private s3: S3;
   private region?: string;
