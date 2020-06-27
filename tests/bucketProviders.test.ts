@@ -12,32 +12,33 @@ import gcsOptions from './config/gcs-config.json';
 import minioOptions from './config/minio-config.json';
 import s3Options from './config/s3-config.json';
 
-(async () => {
-  const providers: { [key: string]: BucketProviderExt } = {
-    folder: await getBucketProvider('folder', folderOptions),
-    gcs: await getBucketProvider('gcs', gcsOptions),
-    s3: await getBucketProvider('s3', s3Options),
-    minio: await getBucketProvider('s3', minioOptions)
-  }
+let providers: { [key: string]: BucketProviderExt } = {};
   
-  describe('bucketProviders', () => {
-    Object.keys(providers).forEach(key => {
-      beforeEach(() => {
-        rimraf.sync('junk');
-        mkdirp.sync('junk');
-      })
-      afterEach(() => {
-        //rimraf.sync('junk');
-      });
-      test(`Basic crud on files with ${key}`, async () => {
-        await uploadListDownloadListDelete(providers[key]);
-      });
-      test(`Pagination on listFiles with ${key}`, async () => {
-        await listFilesPagination(providers[key]);
-      });
+describe('bucketProviders', () => {
+  Object.keys(providers).forEach(key => {
+    beforeAll(async () => {
+      providers = {
+        folder: await getBucketProvider('folder', folderOptions),
+        gcs: await getBucketProvider('gcs', gcsOptions),
+        s3: await getBucketProvider('s3', s3Options),
+        minio: await getBucketProvider('s3', minioOptions)
+      }
+    });
+    beforeEach(() => {
+      rimraf.sync('junk');
+      mkdirp.sync('junk');
+    })
+    afterEach(() => {
+      rimraf.sync('junk');
+    });
+    test(`Basic crud on files with ${key}`, async () => {
+      await uploadListDownloadListDelete(providers[key]);
+    });
+    test(`Pagination on listFiles with ${key}`, async () => {
+      await listFilesPagination(providers[key]);
     });
   });
-})();
+});
 
 async function uploadListDownloadListDelete(bp: BucketProviderExt) {
   await bp.uploadFile(`tsconfig.json`, 'foo/bar/tsconfig.json');
