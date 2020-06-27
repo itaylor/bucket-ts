@@ -1,9 +1,7 @@
-
 import { BucketProvider, BucketProviderExt } from './types';
 import recursive from 'recursive-readdir';
 import { statSync } from 'fs';
 import { relative, join } from 'path';
-
 
 export default function bucketProviderExtFactory(bp: BucketProvider): BucketProviderExt {
   const ext = <BucketProviderExt> bp;

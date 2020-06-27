@@ -1,0 +1,6 @@
+{
+  "bucketName": "bucket-ts-test-bucket",
+  "accessKeyId": "${{ MINIO_ACCESS_KEY_ID }}",
+  "secretAccessKey": "${{ MINIO_SECRET_ACCESS_KEY }}",
+  "endpoint": "${{ MINIO_ENDPOINT }}"
+}

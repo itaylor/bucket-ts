@@ -13,18 +13,14 @@ export class S3BucketProvider implements BucketProvider {
   private region?: string;
   private endpoint?: string;
   private bucketName: string;
-  constructor (bucketName: string, options: any) {
-    const { accessKeyId, secretAccessKey } = <S3BucketOptions> options;
+  constructor (options: S3BucketOptions) {
     this.endpoint = options.endpoint;
     this.region = options.region;
     this.s3 = new S3({
-      accessKeyId, 
-      secretAccessKey, 
-      region: options.region,
-      endpoint: this.endpoint,
+      ...options,
       s3ForcePathStyle: !!this.endpoint,
     });
-    this.bucketName = bucketName;
+    this.bucketName = options.bucketName;
   }
 
   getBaseUrl() {
@@ -78,7 +74,6 @@ export class S3BucketProvider implements BucketProvider {
       MaxKeys: paginator.maxReturn,
       ContinuationToken: paginator.pageOffsetId,
     }).promise();
-    results.NextContinuationToken
     
     return {
       complete: !results.NextContinuationToken,
@@ -106,6 +101,7 @@ export class S3BucketProvider implements BucketProvider {
   }
 };
 
+// @ts-ignore
 registerBucketProvider('s3', S3BucketProvider);
 
 function readStreamToEnd(src: stream.Readable, dest: stream.Writable) {

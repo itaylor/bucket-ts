@@ -3,48 +3,30 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "S3BucketOptions": {
-      "anyOf": [
-        {
-          "additionalProperties": false,
-          "properties": {
-            "accessKeyId": {
-              "type": "string"
-            },
-            "region": {
-              "type": "string"
-            },
-            "secretAccessKey": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "accessKeyId",
-            "secretAccessKey",
-            "region"
-          ],
-          "type": "object"
+      "additionalProperties": false,
+      "properties": {
+        "accessKeyId": {
+          "type": "string"
         },
-        {
-          "additionalProperties": false,
-          "properties": {
-            "accessKeyId": {
-              "type": "string"
-            },
-            "endpoint": {
-              "type": "string"
-            },
-            "secretAccessKey": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "endpoint",
-            "accessKeyId",
-            "secretAccessKey"
-          ],
-          "type": "object"
+        "bucketName": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "secretAccessKey": {
+          "type": "string"
         }
-      ]
+      },
+      "required": [
+        "bucketName",
+        "accessKeyId",
+        "secretAccessKey"
+      ],
+      "type": "object"
     }
   }
 }

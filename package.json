@@ -6,6 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start-minio": "./start-minio.sh", 
+    "load-env": "source ~/bucket-ts.env",
     "build": "yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test"
   },

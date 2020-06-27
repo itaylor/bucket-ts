@@ -5,12 +5,15 @@
     "FolderBucketOptions": {
       "additionalProperties": false,
       "properties": {
-        "folderPath": {
+        "bucketName": {
           "type": "string"
+        },
+        "createMissingFolders": {
+          "type": "boolean"
         }
       },
       "required": [
-        "folderPath"
+        "bucketName"
       ],
       "type": "object"
     }

@@ -1,4 +1,12 @@
 export type GCSBucketOptions = {
-  keyFilename : string,
-  folderName? : string
+  bucketName: string,
+  keyFilename: string,
+} | {
+  bucketName: string,
+  email?: string,
+  projectId?: string,
+  credentials: {
+    client_email: string,
+    private_key: string,
+  }
 }

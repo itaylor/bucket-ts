@@ -9,8 +9,12 @@ export type BucketProviderListResponse = {
   paginator: BucketProviderPaginator,
 }
 
+export interface BucketProviderOptions {
+  bucketName: string,
+}
+
 export interface BucketProviderCtor {
-  new (bucketName:string, options: any): BucketProvider;
+  new (options: BucketProviderOptions): BucketProvider;
   getOptionsSchema(): object;
 }
 

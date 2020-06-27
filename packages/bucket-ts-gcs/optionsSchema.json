@@ -3,19 +3,59 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "GCSBucketOptions": {
-      "additionalProperties": false,
-      "properties": {
-        "folderName": {
-          "type": "string"
+      "anyOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "bucketName": {
+              "type": "string"
+            },
+            "keyFilename": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "bucketName",
+            "keyFilename"
+          ],
+          "type": "object"
         },
-        "keyFilename": {
-          "type": "string"
+        {
+          "additionalProperties": false,
+          "properties": {
+            "bucketName": {
+              "type": "string"
+            },
+            "credentials": {
+              "additionalProperties": false,
+              "properties": {
+                "client_email": {
+                  "type": "string"
+                },
+                "private_key": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "client_email",
+                "private_key"
+              ],
+              "type": "object"
+            },
+            "email": {
+              "type": "string"
+            },
+            "projectId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "bucketName",
+            "credentials"
+          ],
+          "type": "object"
         }
-      },
-      "required": [
-        "keyFilename"
-      ],
-      "type": "object"
+      ]
     }
   }
 }

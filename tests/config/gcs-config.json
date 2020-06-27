@@ -1,0 +1,8 @@
+{
+  "bucketName": "bucket-ts-test-bucket",
+  "projectId": "ian-default-project",
+  "credentials": {
+    "client_email": "${{ GCS_CLIENT_EMAIL }}",
+    "private_key": "${{ GCS_PRIVATE_KEY }}"
+  }
+}

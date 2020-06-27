@@ -3,20 +3,21 @@ import getBucketProvider, { BucketProviderExt } from 'bucket-ts';
 import rimraf from 'rimraf';
 import mkdirp from 'mkdirp';
 import fs from 'fs';
-import { homedir } from 'os';
 import 'bucket-ts';
 import 'bucket-ts-folder';
 import 'bucket-ts-gcs';
 import 'bucket-ts-s3';
-import s3Config from '../../../aws.config.json';
-import minioConfig from '../../../minio.config.json';
+import folderOptions from './config/folder-config.json';
+import gcsOptions from './config/gcs-config.json';
+import minioOptions from './config/minio-config.json';
+import s3Options from './config/s3-config.json';
 
 (async () => {
   const providers: { [key: string]: BucketProviderExt } = {
-    folder: await getBucketProvider('folder', 'test-bucket', { folderPath: 'junk' }),
-    gcs: await getBucketProvider('gcs', 'mkto-snapdiff-test', { keyFilename: `${homedir()}/snapdiff-gcs.json` }),
-    s3: await getBucketProvider('s3', 'bucket-ts-test-bucket', s3Config),
-    minio: await getBucketProvider('s3', 'bucket-ts-test-bucket', minioConfig)
+    folder: await getBucketProvider('folder', folderOptions),
+    gcs: await getBucketProvider('gcs', gcsOptions),
+    s3: await getBucketProvider('s3', s3Options),
+    minio: await getBucketProvider('s3', minioOptions)
   }
   
   describe('bucketProviders', () => {

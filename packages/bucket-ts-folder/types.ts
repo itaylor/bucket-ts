@@ -1,3 +1,4 @@
 export type FolderBucketOptions = {
-  folderPath: string
+  bucketName: string,
+  createMissingFolders?: boolean,
 }

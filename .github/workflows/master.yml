@@ -24,4 +24,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn
     - run: yarn build
-    - run: yarn test
+    - run: yarn start-minio && yarn test
+      env:
+        GCS_CLIENT_EMAIL: ${{ secrets.GCS_CLIENT_EMAIL }}
+        GCS_PRIVATE_KEY: ${{ secrets.GCS_PRIVATE_KEY }}
+        S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+        S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_ACCESS_KEY }}
+        MINIO_ACCESS_KEY_ID: ${{ secrets.MINIO_ACCESS_KEY_ID }}
+        MINIO_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_ACCESS_KEY }}
+        MINIO_ENDPOINT: ${{ secrets.MINIO_ENDPOINT }}

@@ -1,7 +1,7 @@
-import { BucketProvider, BucketProviderResponse, BucketProviderPaginator, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
+import { BucketProvider, BucketProviderOptions, BucketProviderResponse, BucketProviderPaginator, BucketProviderListFileOptions, BucketProviderListResponse, registerBucketProvider } from 'bucket-ts';
 import { resolve, join, dirname, basename, relative } from 'path';
 import { Stream } from 'stream';
-import { WriteStream, createWriteStream, createReadStream, unlink, Stats } from 'fs';
+import { WriteStream, createWriteStream, createReadStream, unlink, Stats, fstat, statSync } from 'fs';
 import mkdirp from 'mkdirp';
 import { FolderBucketOptions } from './types';
 import optionsSchema from './optionsSchema.json';
@@ -14,13 +14,19 @@ const unlinkAsync = promisify(unlink);
 export class FolderBucketProvider implements BucketProvider {
   private rootFolder: string;
   private bucketName: string;
-  constructor (bucketName: string, options: any) {
-    this.rootFolder = resolve((<FolderBucketOptions> options).folderPath);
-    this.bucketName = bucketName;
+  constructor (options: FolderBucketOptions) {
+    this.rootFolder = resolve(options.bucketName);
+    if (options.createMissingFolders) {
+      mkdirp.sync(this.rootFolder);
+    }
+    if (!statSync(this.rootFolder).isDirectory()) {
+      throw new Error(`bucketName '${options.bucketName}' must be a folder`);
+    }
+    this.bucketName = basename(options.bucketName);
   }
 
   getBaseUrl() {
-    return join(this.rootFolder, this.bucketName);
+    return this.rootFolder
   }
 
   getBucketName() {
@@ -33,11 +39,11 @@ export class FolderBucketProvider implements BucketProvider {
     }
     let filename = destination || basename(filePath);
     if (destination && destination.includes('/')) {
-      mkdirp.sync(join(this.rootFolder, this.bucketName, dirname(destination)));
+      mkdirp.sync(join(this.rootFolder, dirname(destination)));
     }
     let source = createReadStream(filePath);
     let dest = createWriteStream(
-      join(this.rootFolder, this.bucketName, filename)
+      join(this.rootFolder, filename)
     );
 
     await readStreamToEnd(source, dest);
@@ -51,17 +57,17 @@ export class FolderBucketProvider implements BucketProvider {
       throw new Error('Invalid parameters');
     }
     let source = createReadStream(
-      join(this.rootFolder, this.bucketName, remoteFilename)
+      join(this.rootFolder, remoteFilename)
     );
     let dest = createWriteStream(downloadedFilePath);
-    const ok = await readStreamToEnd(source, dest);
+    await readStreamToEnd(source, dest);
     return {
       message: `File "${remoteFilename}" was downloaded successfully from bucket "${this.bucketName}"`,
     }
   };
 
   async listFiles(options: BucketProviderListFileOptions = {}): Promise<BucketProviderListResponse> {
-    const path = join(this.rootFolder, this.bucketName);
+    const path = this.rootFolder;
     let files: Array<string>;
     const paginator: BucketProviderPaginator = options.paginator || { maxReturn: 1000, pageOffsetId: '0' };
     const { prefix } = options;
@@ -99,7 +105,7 @@ export class FolderBucketProvider implements BucketProvider {
   }
 
   async deleteFile(filename: string): Promise<BucketProviderResponse> {
-    const path = join(this.rootFolder, this.bucketName, filename);
+    const path = join(this.rootFolder, filename);
     await unlinkAsync(path);
     return {
       message: `File "${filename}" was deleted successfully from bucket "${this.bucketName}"`
