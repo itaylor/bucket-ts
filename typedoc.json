@@ -3,13 +3,15 @@
     "packages/bucket-ts",
     "packages/bucket-ts-folder",
     "packages/bucket-ts-s3",
-    "packages/bucket-ts-gcs"
+    "packages/bucket-ts-gcs",
+    "packages/bucket-ts-abs"
   ],
   "mode": "library",
   "out": "doc",
   "exclude": [
     ".yarn/**",
     "test/*",
-    "test/**"
+    "test/**",
+    "packages/**/types.ts"
   ]
 }

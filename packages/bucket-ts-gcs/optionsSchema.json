@@ -2,58 +2,75 @@
   "$ref": "#/definitions/GCSBucketOptions",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
-    "GCSBucketOptions": {
-      "anyOf": [
-        {
+    "GCSBucketOptionKeyfileOnly": {
+      "additionalProperties": false,
+      "properties": {
+        "bucketName": {
+          "description": "The name of the GCS bucket",
+          "type": "string"
+        },
+        "keyFilename": {
+          "description": "The path to a [GCS keyfile](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bucketName",
+        "keyFilename"
+      ],
+      "type": "object"
+    },
+    "GCSBucketOptionSpecifiedCredentials": {
+      "additionalProperties": false,
+      "properties": {
+        "bucketName": {
+          "description": "The name of the GCS bucket",
+          "type": "string"
+        },
+        "credentials": {
           "additionalProperties": false,
           "properties": {
-            "bucketName": {
+            "client_email": {
+              "description": "The email associated with the `private_key`, usually for a service account",
               "type": "string"
             },
-            "keyFilename": {
+            "private_key": {
+              "description": "The private key to use for authentication.  Usually associated with a service account",
               "type": "string"
             }
           },
           "required": [
-            "bucketName",
-            "keyFilename"
+            "client_email",
+            "private_key"
           ],
           "type": "object"
         },
+        "email": {
+          "description": "The email of the user of the GCS bucket\nNeeded when keyFilename is a .pem instead of a JSON.",
+          "type": "string"
+        },
+        "keyFilename": {
+          "description": "The path to a [GCS keyfile](https://cloud.google.com/iam/docs/creating-managing-service-account-keys)",
+          "type": "string"
+        },
+        "projectId": {
+          "description": "The google cloud project id, eg: `my-cool-project`",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bucketName",
+        "credentials"
+      ],
+      "type": "object"
+    },
+    "GCSBucketOptions": {
+      "anyOf": [
         {
-          "additionalProperties": false,
-          "properties": {
-            "bucketName": {
-              "type": "string"
-            },
-            "credentials": {
-              "additionalProperties": false,
-              "properties": {
-                "client_email": {
-                  "type": "string"
-                },
-                "private_key": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "client_email",
-                "private_key"
-              ],
-              "type": "object"
-            },
-            "email": {
-              "type": "string"
-            },
-            "projectId": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "bucketName",
-            "credentials"
-          ],
-          "type": "object"
+          "$ref": "#/definitions/GCSBucketOptionKeyfileOnly"
+        },
+        {
+          "$ref": "#/definitions/GCSBucketOptionSpecifiedCredentials"
         }
       ]
     }

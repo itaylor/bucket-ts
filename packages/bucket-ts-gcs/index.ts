@@ -74,6 +74,10 @@ export class GCSBucketProvider implements BucketProvider {
   static getOptionsSchema(): any {
     return optionsSchema;
   }
+
+  getNativeClient(): Bucket {
+    return this.bucket;
+  }
 };
 
 // @ts-ignore

@@ -3,7 +3,116 @@
 
 __metadata:
   version: 4
-  cacheKey: 4
+  cacheKey: 5
+
+"@azure/abort-controller@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@azure/abort-controller@npm:1.0.1"
+  dependencies:
+    tslib: ^1.9.3
+  checksum: dd2ad033953e7b12b4acca7feb9f3c27ac197cc639a13fd362f4559b234022dc016e76529738d7ddc2b841b763ba5338c8afa783f1bd3840e43d1aea08e50d86
+  languageName: node
+  linkType: hard
+
+"@azure/core-asynciterator-polyfill@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@azure/core-asynciterator-polyfill@npm:1.0.0"
+  checksum: 0ca9ab69091dd1a95724884313b6fa0b957d3ead7bcdc055f796599e3854e17e4ecdca193170692d412b5a2b7ccb9c7cfae274c7cbe26b4ab98004b300a285df
+  languageName: node
+  linkType: hard
+
+"@azure/core-auth@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@azure/core-auth@npm:1.1.2"
+  dependencies:
+    "@azure/abort-controller": ^1.0.0
+    "@azure/core-tracing": 1.0.0-preview.8
+    "@opentelemetry/api": ^0.6.1
+    tslib: ^1.10.0
+  checksum: 1d27bad82840db8025651bae340b3a4ed13e1935271e73fbeab7f962937e46a455224a5428dfd7610636d4635fb839b63e49a0f216f105705490c3cc6f179972
+  languageName: node
+  linkType: hard
+
+"@azure/core-http@npm:^1.1.1":
+  version: 1.1.3
+  resolution: "@azure/core-http@npm:1.1.3"
+  dependencies:
+    "@azure/abort-controller": ^1.0.0
+    "@azure/core-auth": ^1.1.2
+    "@azure/core-tracing": 1.0.0-preview.8
+    "@azure/logger": ^1.0.0
+    "@opentelemetry/api": ^0.6.1
+    "@types/node-fetch": ^2.5.0
+    "@types/tunnel": ^0.0.1
+    form-data: ^3.0.0
+    node-fetch: ^2.6.0
+    process: ^0.11.10
+    tough-cookie: ^4.0.0
+    tslib: ^1.10.0
+    tunnel: ^0.0.6
+    uuid: ^8.1.0
+    xml2js: ^0.4.19
+  checksum: 6f8de0a578c8a928054179034d26154fc7eda0bbd7c1bcacdfb67e37c9835cc0101812fdf79f8faf5a9ce4ff6aa372554e94532f47cbf218e53949c0396a922f
+  languageName: node
+  linkType: hard
+
+"@azure/core-lro@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@azure/core-lro@npm:1.0.2"
+  dependencies:
+    "@azure/abort-controller": ^1.0.0
+    "@azure/core-http": ^1.1.1
+    events: ^3.0.0
+    tslib: ^1.10.0
+  checksum: 670511274311b8314d143c165639e0434db239df9dbada916e808b276f86d407351bd415a162487d489b337c047dace744535c03d62d4942a43ecc469d1ea964
+  languageName: node
+  linkType: hard
+
+"@azure/core-paging@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@azure/core-paging@npm:1.1.1"
+  dependencies:
+    "@azure/core-asynciterator-polyfill": ^1.0.0
+  checksum: da489b640a46a688c3b8ab4276740dc78c7c6240ea5f18acaf42ba4d9b9778dcf3a4395ed217b5bbfd672b46d059d5ce694bd9ca6bc2380f8db2dc5977449d2f
+  languageName: node
+  linkType: hard
+
+"@azure/core-tracing@npm:1.0.0-preview.8":
+  version: 1.0.0-preview.8
+  resolution: "@azure/core-tracing@npm:1.0.0-preview.8"
+  dependencies:
+    "@opencensus/web-types": 0.0.7
+    "@opentelemetry/api": ^0.6.1
+    tslib: ^1.10.0
+  checksum: 3b51860206b7857ce0159f7c5e6b12f1a98bea2bd4887bcbfa6fcfdd351c312783789ea211b0a157576c5d2fcad0836266ec46231cee5314206678fa2ab108b7
+  languageName: node
+  linkType: hard
+
+"@azure/logger@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@azure/logger@npm:1.0.0"
+  dependencies:
+    tslib: ^1.9.3
+  checksum: 710d91a8f389cc5bfcdc207b6cbc13175123d8ece291c996e2c975f40d2af9d00629cbd6965f6e2c1281a24cad74a23621b5fc9d27bd2a98648e2c2b245f246e
+  languageName: node
+  linkType: hard
+
+"@azure/storage-blob@npm:^12.1.2":
+  version: 12.1.2
+  resolution: "@azure/storage-blob@npm:12.1.2"
+  dependencies:
+    "@azure/abort-controller": ^1.0.0
+    "@azure/core-http": ^1.1.1
+    "@azure/core-lro": ^1.0.2
+    "@azure/core-paging": ^1.1.1
+    "@azure/core-tracing": 1.0.0-preview.8
+    "@azure/logger": ^1.0.0
+    "@opentelemetry/api": ^0.6.1
+    events: ^3.0.0
+    tslib: ^1.10.0
+  checksum: 917e58a22babb1415790940a70a5ca1e35d42ea0bd3eae46d42a54de6ec2f6b83a738c31a4b2d29a57b18601ad91205d0b6d102afc73fa61ba607e44473c657b
+  languageName: node
+  linkType: hard
 
 "@babel/code-frame@npm:^7.0.0":
   version: 7.10.1
@@ -153,6 +262,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@opencensus/web-types@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@opencensus/web-types@npm:0.0.7"
+  checksum: 52c6efc58f852003c2ef37ad490f1ee390c4a59b3b30f461b88a2233fb3e76d753455e77b15500371d255dfb54f5351653e8d975ba3cedb0a7907b433f42845c
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/api@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "@opentelemetry/api@npm:0.6.1"
+  dependencies:
+    "@opentelemetry/context-base": ^0.6.1
+  checksum: 360f2e5bb1a3649b6fdfc78a2c2a33c0c39dd3bec35ad35bfc13cf5ab697385e4bbbdbe8ba1755bf26587efe55b5e2e3d0a7d62641b89620f8246645d337378d
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/context-base@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "@opentelemetry/context-base@npm:0.6.1"
+  checksum: 394333c0c1014d1563c3b952aa296d0ce84b6a7b067937a8ea72c6173670fe682c1ee905c7b0adf1f23532a0570e27fba93edae2d9cc62f133cdf7195e8b9e05
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^2.1.1":
   version: 2.1.1
   resolution: "@sindresorhus/is@npm:2.1.1"
@@ -286,6 +418,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node-fetch@npm:^2.5.0":
+  version: 2.5.7
+  resolution: "@types/node-fetch@npm:2.5.7"
+  dependencies:
+    "@types/node": "*"
+    form-data: ^3.0.0
+  checksum: 101f6e8474407f957dfe1750d82aa0bcaa56347d09c8ba8634e6a901d07032533c0a578860691d915ff8fa230355700c41c04ae7e505840b5d6ff8cc3ece7741
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*, @types/node@npm:^13.7.0":
   version: 13.13.10
   resolution: "@types/node@npm:13.13.10"
@@ -353,6 +495,15 @@ __metadata:
   version: 1.0.1
   resolution: "@types/stack-utils@npm:1.0.1"
   checksum: 59738e4b71b233b438a6ecb9faaf577d6f02afec4ea093d5ad3c10e78cb7096ab32648a2c2017c6c2e6c6853498aa783643a2c6b859c4a75f6750e7b37ae8bae
+  languageName: node
+  linkType: hard
+
+"@types/tunnel@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@types/tunnel@npm:0.0.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 70de50a226402432ce604dc5fa18cfe8c13ecfdda53483a0eaea9808ca12fcea3fbd4fbc6e790260ff93decdd12575dfc4ab66b6e5b1472492746603472e2a13
   languageName: node
   linkType: hard
 
@@ -807,6 +958,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bucket-ts-abs@workspace:packages/bucket-ts-abs":
+  version: 0.0.0-use.local
+  resolution: "bucket-ts-abs@workspace:packages/bucket-ts-abs"
+  dependencies:
+    "@azure/storage-blob": ^12.1.2
+    "@types/node": ^14.0.13
+    bucket-ts: "portal:../bucket-ts"
+    ts-json-schema-generator: ^0.70.1
+    typescript: ^3.9.5
+  peerDependencies:
+    bucket-ts: "*"
+  languageName: unknown
+  linkType: soft
+
 "bucket-ts-folder@link:../packages/bucket-ts-folder::locator=bucket-ts-test%40workspace%3Atests":
   version: 0.0.0-use.local
   resolution: "bucket-ts-folder@link:../packages/bucket-ts-folder::locator=bucket-ts-test%40workspace%3Atests"
@@ -855,7 +1020,7 @@ __metadata:
   resolution: "bucket-ts-monorepo@workspace:."
   dependencies:
     "@yarnpkg/pnpify": ^2.0.0-rc.25
-    typedoc: next
+    typedoc: 0.17.0-3
     typescript: ^3.9.5
   languageName: unknown
   linkType: soft
@@ -889,6 +1054,7 @@ __metadata:
     "@types/node": ^14.0.13
     "@types/rimraf": ^3.0.0
     bucket-ts: "portal:../packages/bucket-ts"
+    bucket-ts-abs: "workspace:packages/bucket-ts-abs"
     bucket-ts-folder: "link:../packages/bucket-ts-folder"
     bucket-ts-gcs: "link:../packages/bucket-ts-gcs"
     bucket-ts-s3: "link:../packages/bucket-ts-s3"
@@ -899,6 +1065,18 @@ __metadata:
     ts-node: ^8.10.2
     typescript: ^3.9.5
   languageName: unknown
+  linkType: soft
+
+"bucket-ts@portal:../bucket-ts::locator=bucket-ts-abs%40workspace%3Apackages%2Fbucket-ts-abs":
+  version: 0.0.0-use.local
+  resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-abs%40workspace%3Apackages%2Fbucket-ts-abs"
+  dependencies:
+    "@types/node": ^14.0.14
+    "@types/recursive-readdir": ^2.2.0
+    ajv: ^6.12.2
+    recursive-readdir: ^2.2.2
+    typescript: ^3.9.5
+  languageName: node
   linkType: soft
 
 "bucket-ts@portal:../bucket-ts::locator=bucket-ts-folder%40workspace%3Apackages%2Fbucket-ts-folder":
@@ -1172,7 +1350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6, combined-stream@npm:~1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8, combined-stream@npm:~1.0.6":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -1579,6 +1757,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"events@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "events@npm:3.1.0"
+  checksum: b25256e5cb2238e1cf940e81b72ec8b3793e817a8b8ef44031971908a418e1f29ccff0c3ddc0cb5c792f98314a127d4fc9d3670a3e9a681656c28ff1558d8569
+  languageName: node
+  linkType: hard
+
 "expect@npm:26.0.1, expect@npm:^26.0.1":
   version: 26.0.1
   resolution: "expect@npm:26.0.1"
@@ -1697,6 +1882,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"form-data@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "form-data@npm:3.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 1af88217b449eda6566a0d95185f2baa403ed2a0e3b11547069f6062be66cbac7c8d7a25f0fc59560702e96526e659b5b9e5a8c6fefe00f06da44338191a9133
+  languageName: node
+  linkType: hard
+
 "form-data@npm:~2.3.2":
   version: 2.3.3
   resolution: "form-data@npm:2.3.3"
@@ -1749,7 +1945,7 @@ __metadata:
   resolution: "fsevents@patch:fsevents@npm%3A2.1.3#builtin<compat/fsevents>::version=2.1.3&hash=495457"
   dependencies:
     node-gyp: latest
-  checksum: b2c7c3576498b568fcc9e932d6ad10774abffb4668450de2d0afb64531f3aef35016bef0880a74f71b0fee99925301430634698d59c68781c337ba6e28ec038c
+  checksum: 0005677b72f38a129a3cbe8c3794bdc83081a2bec53dfc03b085c2e5e4ca7a33a861a779d623313652df89746d97f79d24e4fef3b101c11c39ce1ea8a9690e18
   languageName: node
   linkType: hard
 
@@ -3015,7 +3211,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:^2.2.0, node-fetch@npm:^2.3.0":
+"node-fetch@npm:^2.2.0, node-fetch@npm:^2.3.0, node-fetch@npm:^2.6.0":
   version: 2.6.0
   resolution: "node-fetch@npm:2.6.0"
   checksum: dd9f586a9f7ddb7dd94d2aba9cb693d32f5001e9850098512fbc8a4cbdd56838afa08ed0a6725b9fce9b01ec12b713e622cbfc16d92762d8b937b238330a632a
@@ -3381,6 +3577,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"process@npm:^0.11.10":
+  version: 0.11.10
+  resolution: "process@npm:0.11.10"
+  checksum: ed93a85e9185b40fb01788c588a87c1a9da0eb925ef7cebebbe1b8bbf0eba1802130366603a29e3b689c116969d4fe018de6aed3474bbeb5aefb3716b85d6449
+  languageName: node
+  linkType: hard
+
 "progress@npm:^2.0.3":
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
@@ -3429,7 +3632,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"psl@npm:^1.1.28":
+"psl@npm:^1.1.28, psl@npm:^1.1.33":
   version: 1.8.0
   resolution: "psl@npm:1.8.0"
   checksum: 92d47c6257456878bfa8190d76b84de69bcefdc129eeee3f9fe204c15fd08d35fe5b8627033f39b455e40a9375a1474b25ff4ab2c5448dd8c8f75da692d0f5b4
@@ -3645,7 +3848,7 @@ fsevents@~2.1.2:
   resolution: "resolve@patch:resolve@npm%3A1.17.0#builtin<compat/resolve>::version=1.17.0&hash=3388aa"
   dependencies:
     path-parse: ^1.0.6
-  checksum: 99df12ab341fb8e96c6bce2ea521d3a1294c5c56f85524369808f7294fbf6f01d6f6c7f4408a1f6cd4fb5762b800a889629ff64abc08f12bcc8c3553e3564ab8
+  checksum: 4bcfb568860d0c361fd16c26b6fce429711138ff0de7dd353bdd73fcb5c7eede2f4602d40ccfa08ff45ec7ef9830845eab2021a46036af0a6e5b58bab1ff6399
   languageName: node
   linkType: hard
 
@@ -4189,6 +4392,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"tough-cookie@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "tough-cookie@npm:4.0.0"
+  dependencies:
+    psl: ^1.1.33
+    punycode: ^2.1.1
+    universalify: ^0.1.2
+  checksum: 161dc4728e2801c1bd3b32d4d14abd2762120d9ed0b96d892720440aa04ed0ad6c425c38195265c74366fe01d8aaf1cc0a31636cb18b82c9b6ce630743210235
+  languageName: node
+  linkType: hard
+
 "tough-cookie@npm:~2.5.0":
   version: 2.5.0
   resolution: "tough-cookie@npm:2.5.0"
@@ -4234,7 +4448,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0":
+"tslib@npm:^1.10.0, tslib@npm:^1.13.0, tslib@npm:^1.9.3":
   version: 1.13.0
   resolution: "tslib@npm:1.13.0"
   checksum: 5dc3bdaea3b67c76ef4a14c28fcb2171da7bcf292fd9c59a260098729626b1ce766c52b588f08e324ed9a0c52ea8a93a815920f980d75981abc9d850fbf310fb
@@ -4306,7 +4520,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"typedoc@npm:next":
+"typedoc@npm:0.17.0-3":
   version: 0.17.0-3
   resolution: "typedoc@npm:0.17.0-3"
   dependencies:
@@ -4340,11 +4554,11 @@ fsevents@~2.1.2:
 
 "typescript@patch:typescript@^3.9.5#builtin<compat/typescript>, typescript@patch:typescript@~3.9.5#builtin<compat/typescript>":
   version: 3.9.5
-  resolution: "typescript@patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=64df9d"
+  resolution: "typescript@patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=5b02a2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 5849aa7c2d887b4d0b289530b45690fc26e606ea3719cf958dbb7f531ca1b968895bbef89b21ecb3903d5039fb047ebf6a0047ba147123060cbe1940ce5c91be
+  checksum: 452cdd20d801630727433a990652c1e65f5eb5586383dda60f178b4fbda5c7951256f9aa31327c73722af9b1b664e3a53d724aabfd8a68866e9b1631818f004c
   languageName: node
   linkType: hard
 
@@ -4373,7 +4587,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"universalify@npm:^0.1.0":
+"universalify@npm:^0.1.0, universalify@npm:^0.1.2":
   version: 0.1.2
   resolution: "universalify@npm:0.1.2"
   checksum: 420fc6547357782c700d53e9a92506a8e95345b13e97684c8f9ab75237912ec2ebb6af8ac10d4f7406b7b6bd21c58f6c5c0811414fb0b4091b78b4743fa6806e
@@ -4430,6 +4644,15 @@ fsevents@~2.1.2:
   bin:
     uuid: dist/bin/uuid
   checksum: a56be8a5bbf2bae755d749d0693637274935b5ae250dfaaaf79241391cf1a7c142a202492196363ec62ec51a476e5e3fc4de2944d854abf2e9b35a33e0e31d4c
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.1.0":
+  version: 8.2.0
+  resolution: "uuid@npm:8.2.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 6059ba10c32a42897af628b9e434ff523713614714d93845c76ee153f0d9c7e88ab47b8d03cadbe5f4c39a57abc4fbff46ae533fff6318cc6c907e4cd626fcb2
   languageName: node
   linkType: hard
 
@@ -4532,7 +4755,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"xml2js@npm:0.4.19":
+"xml2js@npm:0.4.19, xml2js@npm:^0.4.19":
   version: 0.4.19
   resolution: "xml2js@npm:0.4.19"
   dependencies:

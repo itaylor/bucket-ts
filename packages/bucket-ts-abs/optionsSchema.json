@@ -1,0 +1,27 @@
+{
+  "$ref": "#/definitions/ABSBucketOptions",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "ABSBucketOptionConnectionString": {
+      "additionalProperties": false,
+      "properties": {
+        "bucketName": {
+          "description": "The name of the ABS container eg: `my-awesome-bucket`",
+          "type": "string"
+        },
+        "connectionString": {
+          "description": "The connection string to use for this ABS container",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bucketName",
+        "connectionString"
+      ],
+      "type": "object"
+    },
+    "ABSBucketOptions": {
+      "$ref": "#/definitions/ABSBucketOptionConnectionString"
+    }
+  }
+}

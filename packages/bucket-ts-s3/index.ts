@@ -89,7 +89,7 @@ export class S3BucketProvider implements BucketProvider {
   }
 
   async deleteFile(remoteFilename: string ): Promise<BucketProviderResponse> {
-    const result = await this.s3.deleteObject({
+    await this.s3.deleteObject({
       Bucket: this.bucketName,
       Key: remoteFilename,
     }).promise();
@@ -101,6 +101,10 @@ export class S3BucketProvider implements BucketProvider {
 
   static getOptionsSchema(): any {
     return optionsSchema;
+  }
+
+  getNativeClient(): S3 {
+    return this.s3;
   }
 };
 

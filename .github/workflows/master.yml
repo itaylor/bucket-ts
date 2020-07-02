@@ -33,3 +33,5 @@ jobs:
         MINIO_ACCESS_KEY_ID: ${{ secrets.MINIO_ACCESS_KEY_ID }}
         MINIO_SECRET_ACCESS_KEY: ${{ secrets.MINIO_SECRET_ACCESS_KEY }}
         MINIO_ENDPOINT: ${{ secrets.MINIO_ENDPOINT }}
+        ABS_CONNECTION_STRING: ${{ secrets.ABS_CONNECTION_STRING }}
+    - run: yarn docs

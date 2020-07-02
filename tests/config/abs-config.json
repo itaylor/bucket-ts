@@ -1,0 +1,4 @@
+{
+    "bucketName": "bucket-ts-test-bucket",
+    "connectionString": "${{ ABS_CONNECTION_STRING }}"
+  }

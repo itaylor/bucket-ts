@@ -6,18 +6,23 @@
       "additionalProperties": false,
       "properties": {
         "accessKeyId": {
+          "description": "The [accessKeyId](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) for the bucket",
           "type": "string"
         },
         "bucketName": {
+          "description": "The name of the s3 bucket eg: `my-awesome-bucket`",
           "type": "string"
         },
         "endpoint": {
+          "description": "The url of the endpoint to use with the S3 client.  \n*Note:* This is only needed if you are using a non-AWS, S3 compatible server, (like [minio](https://min.io/))",
           "type": "string"
         },
         "region": {
+          "description": "The AWS region in which the bucket is used",
           "type": "string"
         },
         "secretAccessKey": {
+          "description": "The [secretAccessKey](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys) for the bucket",
           "type": "string"
         }
       },

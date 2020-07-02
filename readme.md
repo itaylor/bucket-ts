@@ -13,16 +13,18 @@
 * Support for every esoteric feature on every cloud provider.  If you need to do something unusual or provider specific, use that cloud provider's client library instead.
 
 ## Currently supported
-* Amazon S3
-* S3 compatible (tested with minio)
-* Google Cloud Storage gcs
-* Local filesystem
+* Amazon S3 (use provider `s3`, `bucket-ts-s3`)
+* S3 compatible (use provider `s3`, `bucket-ts-s3`, tested with [minio](https://github.com/minio/minio))
+* Google Cloud Storage (use provider `gcs`, `bucket-ts-gcs`)
+* Azure Blob Storage (use provider `abs`, `bucket-ts-abs`)
+* Local filesystem (use provider `folder`, `bucket-ts-folder`)
+
 
 # Usage:
 First add the core `bucket-ts`, then add the support for the bucket store you're wanting to use.
 ```bash
 yarn add bucket-ts
-yarn add bucket-ts-gcs # or bucket-ts-folder or bucket-ts-s3
+yarn add bucket-ts-gcs # or bucket-ts-folder or bucket-ts-s3 or bucket-ts-abs
 ```
 
 Somewhere in your code you'll need to do the following:

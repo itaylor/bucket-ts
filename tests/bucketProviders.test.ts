@@ -7,12 +7,15 @@ import 'bucket-ts';
 import 'bucket-ts-folder';
 import 'bucket-ts-gcs';
 import 'bucket-ts-s3';
+import 'bucket-ts-abs';
 import folderOptions from './config/folder-config.json';
 import gcsOptions from './config/gcs-config.json';
 import minioOptions from './config/minio-config.json';
 import s3Options from './config/s3-config.json';
+import absOptions from './config/abs-config.json';
 
 const providers: { [key: string]: { name: string, options: BucketProviderOptions } } = {
+  'abs': { name: 'abs', options: absOptions },
   folder: { name: 'folder', options: folderOptions },
   gcs: { name: 'gcs', options: gcsOptions },
   s3: { name: 's3', options: s3Options },
@@ -55,7 +58,7 @@ async function uploadListDownloadListDelete(bp: BucketProviderExt) {
 
 async function listFilesPagination(bp: BucketProviderExt) {
   const folderPath = 'fixtures/';
-  const results = await bp.uploadFolder(folderPath, folderPath);
+  await bp.uploadFolder(folderPath, folderPath);
   const listResults = await bp.listFiles({ prefix: folderPath, paginator: {
     maxReturn: 2,
   }});
@@ -66,7 +69,6 @@ async function listFilesPagination(bp: BucketProviderExt) {
   expect(listResults.paginator.pageOffsetId).toBeDefined();
   const listResults2 = await bp.listFiles({ prefix: folderPath, paginator: listResults.paginator });
   // console.log(listResults2, listResults.paginator);
-
   expect(listResults2.results).toEqual([`${folderPath}c.txt`, `${folderPath}d.txt`]);
   expect(listResults2.complete).toBe(false);
   expect(listResults2.paginator.maxReturn).toBe(2);
