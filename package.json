@@ -21,8 +21,8 @@
     "tests"
   ],
   "dependencies": {
-    "@yarnpkg/pnpify": "^2.0.0-rc.25",
-    "typescript": "^3.9.5"
+    "@yarnpkg/pnpify": "2.1.0",
+    "typescript": "3.9.7"
   },
   "devDependencies": {
     "typedoc": "0.17.0-3"
