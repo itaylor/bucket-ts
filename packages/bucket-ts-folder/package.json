@@ -15,7 +15,7 @@
     "@types/recursive-readdir": "2.2.0",
     "bucket-ts": "portal:../bucket-ts",
     "ts-json-schema-generator": "0.70.2",
-    "typescript": "3.9.7"
+    "typescript": "4.0.2"
   },
   "dependencies": {
     "mkdirp": "^1.0.4",
