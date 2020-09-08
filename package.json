@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "@yarnpkg/pnpify": "2.1.0",
+    "@yarnpkg/pnpify": "2.2.1",
     "typescript": "4.0.2"
   },
   "devDependencies": {

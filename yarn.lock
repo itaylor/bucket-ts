@@ -532,7 +532,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:^2.1.0":
+"@yarnpkg/core@npm:^2.2.1":
   version: 2.2.2
   resolution: "@yarnpkg/core@npm:2.2.2"
   dependencies:
@@ -598,7 +598,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/parsers@npm:^2.1.0, @yarnpkg/parsers@npm:^2.2.0":
+"@yarnpkg/parsers@npm:^2.2.0":
   version: 2.2.0
   resolution: "@yarnpkg/parsers@npm:2.2.0"
   dependencies:
@@ -619,15 +619,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/pnpify@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@yarnpkg/pnpify@npm:2.1.0"
+"@yarnpkg/pnpify@npm:2.2.1":
+  version: 2.2.1
+  resolution: "@yarnpkg/pnpify@npm:2.2.1"
   dependencies:
-    "@yarnpkg/core": ^2.1.0
-    "@yarnpkg/fslib": ^2.1.0
-    "@yarnpkg/parsers": ^2.1.0
+    "@yarnpkg/core": ^2.2.1
+    "@yarnpkg/fslib": ^2.2.1
+    "@yarnpkg/parsers": ^2.2.0
     chalk: ^3.0.0
-    clipanion: ^2.4.2
+    clipanion: ^2.4.4
     comment-json: ^2.2.0
     lodash: ^4.17.15
     tslib: ^1.13.0
@@ -641,7 +641,7 @@ __metadata:
       optional: true
   bin:
     pnpify: ./lib/cli.js
-  checksum: 334ce4cc6c6c154fb5aa4f6b4847bb5d7869596d295cc429dedecaa9b4865cbaf104855d856fbbf5f186da09dd7e63bf7d774665f2ce5439c2664c13ef142cf0
+  checksum: 47a6fd0c11403d1dffdac76765ba995bdc8b5430666997e15c70ca285747e01fe831fd875a13fb1118d22458c019bbe1fab60945f9cb0a6ef46d291a5759b244
   languageName: node
   linkType: hard
 
@@ -1041,7 +1041,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts-monorepo@workspace:."
   dependencies:
-    "@yarnpkg/pnpify": 2.1.0
+    "@yarnpkg/pnpify": 2.2.1
     typedoc: 0.17.0-3
     typescript: 4.0.2
   languageName: unknown
@@ -1309,7 +1309,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clipanion@npm:^2.4.2, clipanion@npm:^2.4.4":
+"clipanion@npm:^2.4.4":
   version: 2.5.0
   resolution: "clipanion@npm:2.5.0"
   checksum: 700ff428c971413f4c88e40a47047f98e84e7ce53dd00f9a2f44e603038645f673319a1fb17a27b3dda5c4314f79ef6b2bf7cbbcdc5b94827e377c43f72fa4c3
