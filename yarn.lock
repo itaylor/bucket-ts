@@ -395,7 +395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:^7.0.5":
+"@types/json-schema@npm:^7.0.6":
   version: 7.0.6
   resolution: "@types/json-schema@npm:7.0.6"
   checksum: 820cabe35ac915b93e38b0c01957e5c49d7d9f69251dddfbf39af0ff4fe24f6e08b39e55603e0d212dea7bcaa383b1218b58a738d1c02013dc22df06547ff238
@@ -987,7 +987,7 @@ __metadata:
     "@azure/storage-blob": ^12.1.2
     "@types/node": 14.6.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.70.2
+    ts-json-schema-generator: 0.73.0
     typescript: 4.0.2
   peerDependencies:
     bucket-ts: "*"
@@ -1010,7 +1010,7 @@ __metadata:
     bucket-ts: "portal:../bucket-ts"
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
-    ts-json-schema-generator: 0.70.2
+    ts-json-schema-generator: 0.73.0
     typescript: 4.0.2
   peerDependencies:
     bucket-ts: "*"
@@ -1030,7 +1030,7 @@ __metadata:
     "@google-cloud/storage": ^5.1.0
     "@types/node": 14.6.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.70.2
+    ts-json-schema-generator: 0.73.0
     typescript: 4.0.2
   peerDependencies:
     bucket-ts: "*"
@@ -1061,7 +1061,7 @@ __metadata:
     "@types/node": 14.6.0
     aws-sdk: ^2.702.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.70.2
+    ts-json-schema-generator: 0.73.0
     typescript: 4.0.2
   peerDependencies:
     bucket-ts: "*"
@@ -1384,10 +1384,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:~5.1.0":
-  version: 5.1.0
-  resolution: "commander@npm:5.1.0"
-  checksum: d16141ea7f580945156fb8a06de2834c4647c7d9d3732ebd4534ab8e0b7c64747db301e18f2b840f28ea8fef51f7a8d6178e674b45a21931f0b65ff1c7f476b3
+"commander@npm:~6.1.0":
+  version: 6.1.0
+  resolution: "commander@npm:6.1.0"
+  checksum: ef1e310c3f430b84f8818ec9c6e5ce1b84909616eb2c1b1a79f646bc25fbca156eccf2ecf19f07e77a08dc519728d53d1300f94f3b2ad93de65add66044dfce6
   languageName: node
   linkType: hard
 
@@ -4420,18 +4420,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:0.70.2":
-  version: 0.70.2
-  resolution: "ts-json-schema-generator@npm:0.70.2"
+"ts-json-schema-generator@npm:0.73.0":
+  version: 0.73.0
+  resolution: "ts-json-schema-generator@npm:0.73.0"
   dependencies:
-    "@types/json-schema": ^7.0.5
-    commander: ~5.1.0
+    "@types/json-schema": ^7.0.6
+    commander: ~6.1.0
     glob: ~7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~3.9.5
+    typescript: ~4.0.2
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: ec17efadc5b4257f3214e7b0f3b03dab810a7b5378b04c20e90edebf56687ec942b9f8db52c882019120d02e79cd7bfc93d05176ef3303cd77d85c05261e6add
+  checksum: 2280001cf910a1420db3d7565dc79df5934490d7ccd6e278db61d90a2f8638fae1a7208aa96230846f8a054ebf0359bf09477fb2c69f04e689c569fe722c4a22
   languageName: node
   linkType: hard
 
@@ -4549,7 +4549,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-typescript@4.0.2:
+"typescript@4.0.2, typescript@~4.0.2":
   version: 4.0.2
   resolution: "typescript@npm:4.0.2"
   bin:
@@ -4559,7 +4559,7 @@ typescript@4.0.2:
   languageName: node
   linkType: hard
 
-"typescript@^3.9.5, typescript@~3.9.5":
+typescript@^3.9.5:
   version: 3.9.5
   resolution: "typescript@npm:3.9.5"
   bin:
@@ -4569,7 +4569,7 @@ typescript@4.0.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.0.2#builtin<compat/typescript>":
+"typescript@patch:typescript@4.0.2#builtin<compat/typescript>, typescript@patch:typescript@~4.0.2#builtin<compat/typescript>":
   version: 4.0.2
   resolution: "typescript@patch:typescript@npm%3A4.0.2#builtin<compat/typescript>::version=4.0.2&hash=5b02a2"
   bin:
@@ -4579,7 +4579,7 @@ typescript@4.0.2:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^3.9.5#builtin<compat/typescript>, typescript@patch:typescript@~3.9.5#builtin<compat/typescript>":
+"typescript@patch:typescript@^3.9.5#builtin<compat/typescript>":
   version: 3.9.5
   resolution: "typescript@patch:typescript@npm%3A3.9.5#builtin<compat/typescript>::version=3.9.5&hash=5b02a2"
   bin:
