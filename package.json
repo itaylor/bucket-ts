@@ -24,7 +24,7 @@
     "@yarnpkg/pnpify": "2.1.0",
     "semantic-release": "^17.1.1",
     "semantic-release-monorepo": "^7.0.2",
-    "typescript": "3.9.7"
+    "typescript": "4.0.2"
   },
   "devDependencies": {
     "typedoc": "0.17.0-3"
