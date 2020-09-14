@@ -14,7 +14,7 @@ const unlinkAsync = promisify(unlink);
 /**
  * A bucket provider that uses the local filesystem instead of a "real" object store.
  * 
- * This is incredibly useful for testing scenarios, as you can mimic the behavior of calls that would normally be remote, locally, without installing any additional software.
+ * This is incredibly useful for testing/mocking scenarios, as you can mimic the behavior of calls that would normally be remote, locally, without installing any additional software.
  */
 export class FolderBucketProvider implements BucketProvider {
   private rootFolder: string;
