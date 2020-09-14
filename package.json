@@ -10,7 +10,8 @@
     "load-env": "source ~/bucket-ts.env",
     "build": "yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test",
-    "docs": "typedoc"
+    "docs": "typedoc",
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "files": [
     "build/**",
@@ -21,12 +22,11 @@
     "tests"
   ],
   "dependencies": {
-    "@yarnpkg/pnpify": "2.1.0",
-    "semantic-release": "17.1.1",
-    "semantic-release-monorepo": "7.0.2",
     "typescript": "4.0.2"
   },
   "devDependencies": {
+    "semantic-release": "17.1.1",
+    "semantic-release-monorepo": "7.0.2",
     "typedoc": "0.17.0-3"
   }
 }
