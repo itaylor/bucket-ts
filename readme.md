@@ -45,5 +45,5 @@ await bucketApi.uploadFile('fileToUpload.txt', 'name/of/file/in/bucket.txt');
 ## API Docs
 See: [https://itaylor.github.io/bucket-ts/](https://itaylor.github.io/bucket-ts/)
 
-
+Github: [https://github.com/itaylor/bucket-ts](https://github.com/itaylor/bucket-ts)
 
