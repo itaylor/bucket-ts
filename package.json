@@ -11,7 +11,7 @@
     "build": "yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test",
     "docs": "typedoc",
-    "release": "semantic-release -e semantic-release-monorepo"
+    "release": "yarn workspaces foreach run release"
   },
   "files": [
     "build/**",

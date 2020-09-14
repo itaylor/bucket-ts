@@ -8,7 +8,8 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build-schema": "ts-json-schema-generator --path 'types.ts' --type 'GCSBucketOptions' > optionsSchema.json",
-    "build": "yarn build-schema && tsc"
+    "build": "yarn build-schema && tsc",
+    "release": "semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "@types/node": "14.10.1",
