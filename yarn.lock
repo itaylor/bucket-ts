@@ -640,7 +640,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*, @types/minimatch@npm:3.0.3":
+"@types/minimatch@npm:*":
   version: 3.0.3
   resolution: "@types/minimatch@npm:3.0.3"
   checksum: 672ccdac197e8176eed1a9441d0caf8a29a90eb139b1cefdd4c9e71b1c48f5c749f5d101a2d85da15c6259214ebda95072835021407d60330a731a2672964b82
@@ -673,14 +673,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>= 8, @types/node@npm:^14.0.13":
-  version: 14.10.1
-  resolution: "@types/node@npm:14.10.1"
-  checksum: 086b4baffc1f13eee84fb4ff072d685b3fecad59f4166c4367f1ab0db6aa30fc81cf67e6469775072b51126c52bcfec40bae6fafef4e4dc8f4c42f94211e28f4
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:14.10.1":
+"@types/node@npm:*, @types/node@npm:14.10.1, @types/node@npm:>= 8, @types/node@npm:^14.0.13":
   version: 14.10.1
   resolution: "@types/node@npm:14.10.1"
   checksum: 086b4baffc1f13eee84fb4ff072d685b3fecad59f4166c4367f1ab0db6aa30fc81cf67e6469775072b51126c52bcfec40bae6fafef4e4dc8f4c42f94211e28f4
@@ -1180,15 +1173,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"backbone@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "backbone@npm:1.4.0"
-  dependencies:
-    underscore: ">=1.8.3"
-  checksum: 3a3c95f133fef708ff4a7bfbcdedab6bc63f1188b952af4c16882b029ecfa6c3c6dd367989006b3772ae0bc695d608f3d1f2ab8c076de7632dffff38ce96e9fd
-  languageName: node
-  linkType: hard
-
 "balanced-match@npm:^1.0.0":
   version: 1.0.0
   resolution: "balanced-match@npm:1.0.0"
@@ -1407,7 +1391,7 @@ __metadata:
   dependencies:
     semantic-release: 17.1.1
     semantic-release-monorepo: 7.0.2
-    typedoc: 0.17.0-3
+    typedoc: 0.19.1
     typescript: 4.0.2
   languageName: unknown
   linkType: soft
@@ -3163,18 +3147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "fs-extra@npm:8.1.0"
-  dependencies:
-    graceful-fs: ^4.2.0
-    jsonfile: ^4.0.0
-    universalify: ^0.1.0
-  checksum: 056a96d4f55ab8728b021e251175a4a6440d1edb5845e6c2e8e010019bde3e63de188a0eb99386c21c71804ca1a571cd6e08f507971f10a2bc4f4f7667720fa4
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^9.0.0":
+"fs-extra@npm:^9.0.0, fs-extra@npm:^9.0.1":
   version: 9.0.1
   resolution: "fs-extra@npm:9.0.1"
   dependencies:
@@ -3543,7 +3516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"handlebars@npm:^4.7.2, handlebars@npm:^4.7.6":
+"handlebars@npm:^4.7.6":
   version: 4.7.6
   resolution: "handlebars@npm:4.7.6"
   dependencies:
@@ -3686,10 +3659,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^9.18.0":
-  version: 9.18.3
-  resolution: "highlight.js@npm:9.18.3"
-  checksum: b6b518f937ce65779cbebb219f94ed685cdbad142f222a183afa5d0dd24dfb6b1aeaef40087ff74a2ea978c3ae9b814452bfdef685c98971e4b840f306ccdb82
+"highlight.js@npm:^10.0.0":
+  version: 10.2.0
+  resolution: "highlight.js@npm:10.2.0"
+  checksum: 249ae2aa4504200bb0bf856a0ed40dfd65f0302b5780dffcdc74d30bed31de72c9d1d1c2ab1fb6e365ebf7096064b69288cf1985c1d7bac6967fcb956ea7d247
   languageName: node
   linkType: hard
 
@@ -4605,13 +4578,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jquery@npm:^3.4.1":
-  version: 3.5.1
-  resolution: "jquery@npm:3.5.1"
-  checksum: c50818c84837902a60938c85786feb612f346a9918f7285409d605449460790b3815ad8aaf5806f19e89f1a79b27d327802b421ab354fe213f3fd1801e3562e6
-  languageName: node
-  linkType: hard
-
 "js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -4688,18 +4654,6 @@ __metadata:
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
   checksum: 261dfb8eb3e72c8b0dda11fd7c20c151ffc1d1b03e529245d51708c8dd8d8c6a225880464adf41a570dff6e5c805fd9d1f47fed948cfb526e4fbe5a67ce4e5f4
-  languageName: node
-  linkType: hard
-
-"jsonfile@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "jsonfile@npm:4.0.0"
-  dependencies:
-    graceful-fs: ^4.1.6
-  dependenciesMeta:
-    graceful-fs:
-      optional: true
-  checksum: a40b7b64da41c84b0dc7ad753737ba240bb0dc50a94be20ec0b73459707dede69a6f89eb44b4d29e6994ed93ddf8c9b6e57f6b1f09dd707567959880ad6cee7f
   languageName: node
   linkType: hard
 
@@ -5210,7 +5164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.4":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.4":
   version: 4.17.20
   resolution: "lodash@npm:4.17.20"
   checksum: c62101d2500c383b5f174a7e9e6fe8098149ddd6e9ccfa85f36d4789446195f5c4afd3cfba433026bcaf3da271256566b04a2bf2618e5a39f6e67f8c12030cb6
@@ -5261,7 +5215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lunr@npm:^2.3.8":
+"lunr@npm:^2.3.9":
   version: 2.3.9
   resolution: "lunr@npm:2.3.9"
   checksum: a2b66320c2f6632322b91c43621eed9e623c0f1b81e7c2d74c238884a02229698baa4478bd238e9b32d7abf0db5ae9233b311c28e1edbcc481774e1ce83bec6f
@@ -5374,16 +5328,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^0.8.0":
-  version: 0.8.2
-  resolution: "marked@npm:0.8.2"
-  bin:
-    marked: bin/marked
-  checksum: 49148dd7898fcd7215458a6ba5dec895a8343f2823c12da527dd40b29ed71c5235cba06a19833cc61e138811fa459484550a69ad89aa42af9f6e87b9dad19b7d
-  languageName: node
-  linkType: hard
-
-"marked@npm:^1.0.0":
+"marked@npm:^1.0.0, marked@npm:^1.1.1":
   version: 1.1.1
   resolution: "marked@npm:1.1.1"
   bin:
@@ -7698,7 +7643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shelljs@npm:^0.8.3":
+"shelljs@npm:^0.8.4":
   version: 0.8.4
   resolution: "shelljs@npm:0.8.4"
   dependencies:
@@ -8635,37 +8580,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typedoc-default-themes@npm:0.8.0-0":
-  version: 0.8.0-0
-  resolution: "typedoc-default-themes@npm:0.8.0-0"
-  dependencies:
-    backbone: ^1.4.0
-    jquery: ^3.4.1
-    lunr: ^2.3.8
-    underscore: ^1.9.1
-  checksum: 3c6cba207e684269e53376d05645a4a7b88ed817010e4d137a108f1d6366c7646bcebc11b27ce8e4fe651aef8446df94c5ef6f089bc697dc6f3d7bdacfe3aff2
+"typedoc-default-themes@npm:^0.11.1":
+  version: 0.11.3
+  resolution: "typedoc-default-themes@npm:0.11.3"
+  checksum: b126abdeefff0c7c24c2b0f7cdb99d8032bfa1cdcdb5177dc01438417a3db441c34110352e75d05a0f0435d2cd5f7fe78e9d053e376501d9805c77afd2816681
   languageName: node
   linkType: hard
 
-"typedoc@npm:0.17.0-3":
-  version: 0.17.0-3
-  resolution: "typedoc@npm:0.17.0-3"
+"typedoc@npm:0.19.1":
+  version: 0.19.1
+  resolution: "typedoc@npm:0.19.1"
   dependencies:
-    "@types/minimatch": 3.0.3
-    fs-extra: ^8.1.0
-    handlebars: ^4.7.2
-    highlight.js: ^9.18.0
-    lodash: ^4.17.15
-    marked: ^0.8.0
+    fs-extra: ^9.0.1
+    handlebars: ^4.7.6
+    highlight.js: ^10.0.0
+    lodash: ^4.17.20
+    lunr: ^2.3.9
+    marked: ^1.1.1
     minimatch: ^3.0.0
     progress: ^2.0.3
-    shelljs: ^0.8.3
-    typedoc-default-themes: 0.8.0-0
+    semver: ^7.3.2
+    shelljs: ^0.8.4
+    typedoc-default-themes: ^0.11.1
   peerDependencies:
-    typescript: ">=3.7"
+    typescript: 3.9.x || 4.0.x
   bin:
     typedoc: bin/typedoc
-  checksum: bc3155f6657ce8a18a8c13dc45f65d85a235bf6bf4d8ba8acdbcf8dcee77f1bcd38a9f6bb6c731242a0a1693f1ec930196524621b214953b61af18fd61b06f20
+  checksum: aee83bcc5fc359193b94c8a20f7916440bfb8bd529d377e8818560e5711b685c66093c82a969a17217926a7a9da8e0c26fc92e1ad387566904767fd62f7deebb
   languageName: node
   linkType: hard
 
@@ -8729,13 +8670,6 @@ typescript@^3.9.5:
   version: 1.1.0
   resolution: "umask@npm:1.1.0"
   checksum: d9bb200f64cb1318ed598fee371c15068b22dbf5b573b14fe174bcd832588e589b3368955aed530edbea874ce9dee6a15b16a2a2638a9f9bd3eccff36ce4f9e5
-  languageName: node
-  linkType: hard
-
-"underscore@npm:>=1.8.3, underscore@npm:^1.9.1":
-  version: 1.11.0
-  resolution: "underscore@npm:1.11.0"
-  checksum: 5276f866a68b1bc6b4b889409d9186754ee695ccfd6d4fcc723fc1834b9c018a2d5ec9cf2fc8c7271e21f5fbff350c3ac5ee8b3e261635151e8c7c8dcf696c5c
   languageName: node
   linkType: hard
 
@@ -8803,7 +8737,7 @@ typescript@^3.9.5:
   languageName: node
   linkType: hard
 
-"universalify@npm:^0.1.0, universalify@npm:^0.1.2":
+"universalify@npm:^0.1.2":
   version: 0.1.2
   resolution: "universalify@npm:0.1.2"
   checksum: 420fc6547357782c700d53e9a92506a8e95345b13e97684c8f9ab75237912ec2ebb6af8ac10d4f7406b7b6bd21c58f6c5c0811414fb0b4091b78b4743fa6806e
