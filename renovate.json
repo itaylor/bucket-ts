@@ -4,5 +4,6 @@
   ],
   "compatibility": {
     "yarn": "2.x"
-  }
+  },
+  "automerge": true
 }

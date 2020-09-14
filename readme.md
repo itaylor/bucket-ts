@@ -8,6 +8,7 @@
 * Modular: only installs packages for the bucket provider you're using, won't bloat your `node_modules` with every single cloud provider's SDKs.
 * Local filesystem support with the same API
 * Secure secret handling: supports pulling secrets from env vars without them hitting the disk
+* Auto updated/released so that current versions of dependencies are always used 
 
 ## Non-goals
 * Support for every esoteric feature on every cloud provider.  If you need to do something unusual or provider specific, use that cloud provider's client library instead.
