@@ -25,6 +25,7 @@ jobs:
     - run: yarn
     - run: yarn build
     - run: yarn start-minio && yarn test
+    - run: yarn release
       env:
         GCS_CLIENT_EMAIL: ${{ secrets.GCS_CLIENT_EMAIL }}
         GCS_PRIVATE_KEY: ${{ secrets.GCS_PRIVATE_KEY }}
