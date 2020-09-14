@@ -7,7 +7,7 @@
     "packages/bucket-ts-abs"
   ],
   "mode": "library",
-  "out": "doc",
+  "out": "docs",
   "exclude": [
     ".yarn/**",
     "test/*",

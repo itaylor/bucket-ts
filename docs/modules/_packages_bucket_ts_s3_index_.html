@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;packages/bucket-ts-abs/index&quot; | bucket-ts</title>
+	<title>&quot;packages/bucket-ts-s3/index&quot; | bucket-ts</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_packages_bucket_ts_abs_index_.html">&quot;packages/bucket-ts-abs/index&quot;</a>
+					<a href="_packages_bucket_ts_s3_index_.html">&quot;packages/bucket-ts-s3/index&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;packages/bucket-ts-abs/index&quot;</h1>
+			<h1>Module &quot;packages/bucket-ts-s3/index&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,14 +73,13 @@
 						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_packages_bucket_ts_abs_index_.absbucketprovider.html" class="tsd-kind-icon">ABSBucket<wbr>Provider</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_packages_bucket_ts_s3_index_.s3bucketprovider.html" class="tsd-kind-icon">S3<wbr>Bucket<wbr>Provider</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_packages_bucket_ts_abs_index_.html#absbucketoptionconnectionstring" class="tsd-kind-icon">ABSBucket<wbr>Option<wbr>Connection<wbr>String</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_packages_bucket_ts_abs_index_.html#absbucketoptions" class="tsd-kind-icon">ABSBucket<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_packages_bucket_ts_s3_index_.html#s3bucketoptions" class="tsd-kind-icon">S3<wbr>Bucket<wbr>Options</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,45 +88,60 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="absbucketoptionconnectionstring" class="tsd-anchor"></a>
-					<h3>ABSBucket<wbr>Option<wbr>Connection<wbr>String</h3>
-					<div class="tsd-signature tsd-kind-icon">ABSBucket<wbr>Option<wbr>Connection<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>bucketName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>connectionString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<a name="s3bucketoptions" class="tsd-anchor"></a>
+					<h3>S3<wbr>Bucket<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">S3<wbr>Bucket<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>accessKeyId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>bucketName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>endpoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>region<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secretAccessKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/itaylor/bucket-ts/blob/d00070c/packages/bucket-ts-abs/types.ts#L1">packages/bucket-ts-abs/types.ts:1</a></li>
+							<li>Defined in <a href="https://github.com/itaylor/bucket-ts/blob/e2e498b/packages/bucket-ts-s3/types.ts#L1">packages/bucket-ts-s3/types.ts:1</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>bucket<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5>access<wbr>Key<wbr>Id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>The name of the ABS container eg: <code>my-awesome-bucket</code></p>
+										<p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">accessKeyId</a> for the bucket</p>
 									</div>
 								</div>
 							</li>
 							<li class="tsd-parameter">
-								<h5>connection<wbr>String<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5>bucket<wbr>Name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>The connection string to use for this ABS container</p>
+										<p>The name of the s3 bucket eg: <code>my-awesome-bucket</code></p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> endpoint<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The url of the endpoint to use with the S3 client.
+										<em>Note:</em> This is only needed if you are using a non-AWS, S3 compatible server, (like <a href="https://min.io/">minio</a>)</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> region<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The AWS region in which the bucket is used</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>secret<wbr>Access<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">secretAccessKey</a> for the bucket</p>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="absbucketoptions" class="tsd-anchor"></a>
-					<h3>ABSBucket<wbr>Options</h3>
-					<div class="tsd-signature tsd-kind-icon">ABSBucket<wbr>Options<span class="tsd-signature-symbol">:</span> <a href="_packages_bucket_ts_abs_index_.html#absbucketoptionconnectionstring" class="tsd-signature-type">ABSBucketOptionConnectionString</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/itaylor/bucket-ts/blob/d00070c/packages/bucket-ts-abs/types.ts#L7">packages/bucket-ts-abs/types.ts:7</a></li>
-						</ul>
-					</aside>
 				</section>
 			</section>
 		</div>
@@ -137,7 +151,7 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="_packages_bucket_ts_abs_index_.html">&quot;packages/bucket-<wbr>ts-<wbr>abs/index&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -146,7 +160,7 @@
 					<li class=" tsd-kind-module">
 						<a href="_packages_bucket_ts_gcs_index_.html">&quot;packages/bucket-<wbr>ts-<wbr>gcs/index&quot;</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="_packages_bucket_ts_s3_index_.html">&quot;packages/bucket-<wbr>ts-<wbr>s3/index&quot;</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -163,13 +177,10 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/_packages_bucket_ts_abs_index_.absbucketprovider.html" class="tsd-kind-icon">ABSBucket<wbr>Provider</a>
+						<a href="../classes/_packages_bucket_ts_s3_index_.s3bucketprovider.html" class="tsd-kind-icon">S3<wbr>Bucket<wbr>Provider</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="_packages_bucket_ts_abs_index_.html#absbucketoptionconnectionstring" class="tsd-kind-icon">ABSBucket<wbr>Option<wbr>Connection<wbr>String</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="_packages_bucket_ts_abs_index_.html#absbucketoptions" class="tsd-kind-icon">ABSBucket<wbr>Options</a>
+						<a href="_packages_bucket_ts_s3_index_.html#s3bucketoptions" class="tsd-kind-icon">S3<wbr>Bucket<wbr>Options</a>
 					</li>
 				</ul>
 			</nav>

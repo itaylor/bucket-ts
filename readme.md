@@ -21,7 +21,7 @@
 * Local filesystem (use provider `folder`, `bucket-ts-folder`)
 
 
-# Usage:
+## Usage:
 First add the core `bucket-ts`, then add the support for the bucket store you're wanting to use.
 ```bash
 yarn add bucket-ts
@@ -42,7 +42,8 @@ await bucketApi.uploadFile('fileToUpload.txt', 'name/of/file/in/bucket.txt');
 
 ```
 
-
+## API Docs
+See: [https://itaylor.github.io/bucket-ts/](https://itaylor.github.io/bucket-ts/)
 
 
 
