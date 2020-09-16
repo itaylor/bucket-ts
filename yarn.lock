@@ -1410,7 +1410,7 @@ __metadata:
     "@semantic-release/npm": 7.0.6
     "@semantic-release/release-notes-generator": 9.0.1
     semantic-release: 17.1.1
-    semantic-release-monorepo: 7.0.2
+    semantic-release-monorepo: 7.0.3
     typedoc: 0.17.0-3
     typescript: 4.0.2
   languageName: unknown
@@ -7517,9 +7517,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release-monorepo@npm:7.0.2":
-  version: 7.0.2
-  resolution: "semantic-release-monorepo@npm:7.0.2"
+"semantic-release-monorepo@npm:7.0.3":
+  version: 7.0.3
+  resolution: "semantic-release-monorepo@npm:7.0.3"
   dependencies:
     debug: ^3.1.0
     execa: ^0.8.0
@@ -7530,7 +7530,7 @@ __metadata:
     semantic-release-plugin-decorators: ^3.0.0
   peerDependencies:
     semantic-release: ">=15.11.x"
-  checksum: e052907bbc91c686c9cc73af8d5527a87ef687d71384360cbcfe61cf00965ca6aa0e86d1de0b0d8b5456720e7af23d4a987141f29a10e6382cb88c7a14bcc3f0
+  checksum: 7cbd10ecce578dab3644752beb04bd362213ab88f6461bcf359a71a958dc287a8e13c4c125b59c944bc4687c9b019da031b740be2598549dced45d473041be2e
   languageName: node
   linkType: hard
 
