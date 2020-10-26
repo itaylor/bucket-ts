@@ -680,10 +680,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.14.3":
-  version: 14.14.3
-  resolution: "@types/node@npm:14.14.3"
-  checksum: f77a69dfc0edb74007883f339636f7d79b891219389311ff6d756a966ca1025557c84c68643f738e897385d2e57e9124cc8261fcf080d378398ab60babaffd57
+"@types/node@npm:14.14.5":
+  version: 14.14.5
+  resolution: "@types/node@npm:14.14.5"
+  checksum: 4916d5c46e604be9b76c69300efdf26538f74ad63a5df572a6b66b95238ddbed3c2bcd5a9748c6ec2ef1bf529d84b3f3a53a0eed54d1f46eaa29471cbb7b1406
   languageName: node
   linkType: hard
 
@@ -1349,7 +1349,7 @@ __metadata:
   resolution: "bucket-ts-abs@workspace:packages/bucket-ts-abs"
   dependencies:
     "@azure/storage-blob": ^12.1.2
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     bucket-ts: "portal:../bucket-ts"
     ts-json-schema-generator: 0.77.0
     typescript: 4.0.3
@@ -1369,7 +1369,7 @@ __metadata:
   resolution: "bucket-ts-folder@workspace:packages/bucket-ts-folder"
   dependencies:
     "@types/mkdirp": 1.0.1
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     bucket-ts: "portal:../bucket-ts"
     mkdirp: ^1.0.4
@@ -1392,7 +1392,7 @@ __metadata:
   resolution: "bucket-ts-gcs@workspace:packages/bucket-ts-gcs"
   dependencies:
     "@google-cloud/storage": ^5.1.0
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     bucket-ts: "portal:../bucket-ts"
     ts-json-schema-generator: 0.77.0
     typescript: 4.0.3
@@ -1427,7 +1427,7 @@ __metadata:
   resolution: "bucket-ts-s3@workspace:packages/bucket-ts-s3"
   dependencies:
     "@types/aws-sdk": 2.7.0
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     aws-sdk: ^2.702.0
     bucket-ts: "portal:../bucket-ts"
     ts-json-schema-generator: 0.77.0
@@ -1462,7 +1462,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-abs%40workspace%3Apackages%2Fbucket-ts-abs"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
@@ -1474,7 +1474,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-folder%40workspace%3Apackages%2Fbucket-ts-folder"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
@@ -1486,7 +1486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-gcs%40workspace%3Apackages%2Fbucket-ts-gcs"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
@@ -1498,7 +1498,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-s3%40workspace%3Apackages%2Fbucket-ts-s3"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
@@ -1510,7 +1510,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@portal:../packages/bucket-ts::locator=bucket-ts-test%40workspace%3Atests"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
@@ -1522,7 +1522,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@workspace:packages/bucket-ts"
   dependencies:
-    "@types/node": 14.14.3
+    "@types/node": 14.14.5
     "@types/recursive-readdir": 2.2.0
     ajv: ^6.12.2
     recursive-readdir: ^2.2.2
