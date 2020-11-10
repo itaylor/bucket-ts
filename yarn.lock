@@ -1351,7 +1351,7 @@ __metadata:
     "@azure/storage-blob": ^12.1.2
     "@types/node": 14.14.7
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.77.0
+    ts-json-schema-generator: 0.78.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1374,7 +1374,7 @@ __metadata:
     bucket-ts: "portal:../bucket-ts"
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
-    ts-json-schema-generator: 0.77.0
+    ts-json-schema-generator: 0.78.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1394,7 +1394,7 @@ __metadata:
     "@google-cloud/storage": ^5.1.0
     "@types/node": 14.14.7
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.77.0
+    ts-json-schema-generator: 0.78.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1430,7 +1430,7 @@ __metadata:
     "@types/node": 14.14.7
     aws-sdk: ^2.702.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.77.0
+    ts-json-schema-generator: 0.78.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1971,10 +1971,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "commander@npm:6.1.0"
-  checksum: ef1e310c3f430b84f8818ec9c6e5ce1b84909616eb2c1b1a79f646bc25fbca156eccf2ecf19f07e77a08dc519728d53d1300f94f3b2ad93de65add66044dfce6
+"commander@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "commander@npm:6.2.0"
+  checksum: c78501cd98e6ad66839004adc27940f5fc1a0102b306fbbc177965101d586cf6dd2e01bdffd64f99f2d4862101f24e602e3e4baa641b6f6a11c01ec5c900e412
   languageName: node
   linkType: hard
 
@@ -8516,19 +8516,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:0.77.0":
-  version: 0.77.0
-  resolution: "ts-json-schema-generator@npm:0.77.0"
+"ts-json-schema-generator@npm:0.78.0":
+  version: 0.78.0
+  resolution: "ts-json-schema-generator@npm:0.78.0"
   dependencies:
     "@types/json-schema": ^7.0.6
-    commander: ^6.1.0
+    commander: ^6.2.0
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~4.0.3
+    typescript: ~4.0.5
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: c52425f22142730999efefdafdbdc1a7865c42fc1491ae8ef5dc9f7d6611de1530d559d288aef55acc712093deb05901e521389c7db65c84287782b022f620a9
+  checksum: 24b35c2208bf3aefbfbcf5c574c98a00d9b52cdeb7581a550a67c95119fe0b2e5e2acd294d8df3151b0bc951d00f7388353daba9de39a14bccda53b5d7c33010
   languageName: node
   linkType: hard
 
@@ -8674,7 +8674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-typescript@4.0.5:
+"typescript@4.0.5, typescript@~4.0.5":
   version: 4.0.5
   resolution: "typescript@npm:4.0.5"
   bin:
@@ -8694,7 +8694,7 @@ typescript@^3.9.5:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.0.5#builtin<compat/typescript>":
+"typescript@patch:typescript@4.0.5#builtin<compat/typescript>, typescript@patch:typescript@~4.0.5#builtin<compat/typescript>":
   version: 4.0.5
   resolution: "typescript@patch:typescript@npm%3A4.0.5#builtin<compat/typescript>::version=4.0.5&hash=5b02a2"
   bin:
@@ -8711,26 +8711,6 @@ typescript@^3.9.5:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: f0d3d9c987860c7c458229ab6dd7e3d322405db36b70abccba610b5efd9f9451e4e67a3fc7983c0d3741033c1f1a8d7aa859a1510caa8f20fad762fc39648bfa
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@~4.0.3#builtin<compat/typescript>":
-  version: 4.0.3
-  resolution: "typescript@patch:typescript@npm%3A4.0.3#builtin<compat/typescript>::version=4.0.3&hash=5b02a2"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 72db87d09f728c83062d64b5e12ed52effb6278963b6bc5c006219b22c104e02b8ce80164261de554923d3c47d894a1ca937ed542328caccb83ebaedeae98a69
-  languageName: node
-  linkType: hard
-
-typescript@~4.0.3:
-  version: 4.0.3
-  resolution: "typescript@npm:4.0.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 5c892e132756a83d22030d7fb38be47cde27613f71d233dbe7faf79e4a92852c5146bfddcaf8c2da1a37d35ae8bf7b8c888fdcd763d5ad184cea6b21e7466838
   languageName: node
   linkType: hard
 
