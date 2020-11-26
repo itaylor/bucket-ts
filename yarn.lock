@@ -1436,7 +1436,7 @@ __metadata:
     "@azure/storage-blob": ^12.1.2
     "@types/node": 14.14.10
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.78.0
+    ts-json-schema-generator: 0.79.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1459,7 +1459,7 @@ __metadata:
     bucket-ts: "portal:../bucket-ts"
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
-    ts-json-schema-generator: 0.78.0
+    ts-json-schema-generator: 0.79.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1479,7 +1479,7 @@ __metadata:
     "@google-cloud/storage": ^5.1.0
     "@types/node": 14.14.10
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.78.0
+    ts-json-schema-generator: 0.79.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -1515,7 +1515,7 @@ __metadata:
     "@types/node": 14.14.10
     aws-sdk: ^2.702.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.78.0
+    ts-json-schema-generator: 0.79.0
     typescript: 4.0.5
   peerDependencies:
     bucket-ts: "*"
@@ -8653,19 +8653,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:0.78.0":
-  version: 0.78.0
-  resolution: "ts-json-schema-generator@npm:0.78.0"
+"ts-json-schema-generator@npm:0.79.0":
+  version: 0.79.0
+  resolution: "ts-json-schema-generator@npm:0.79.0"
   dependencies:
     "@types/json-schema": ^7.0.6
     commander: ^6.2.0
     fast-json-stable-stringify: ^2.1.0
     glob: ^7.1.6
     json-stable-stringify: ^1.0.1
-    typescript: ~4.0.5
+  peerDependencies:
+    typescript: "*"
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: 24b35c2208bf3aefbfbcf5c574c98a00d9b52cdeb7581a550a67c95119fe0b2e5e2acd294d8df3151b0bc951d00f7388353daba9de39a14bccda53b5d7c33010
+  checksum: db1b74312ed0fb147248dfd577bdc1735f6a4edfe75aa28a3c00067b34d365879eaa403520a6723435ae67dcad4a965d4761dc1ae08151f9dbb67650c638e58c
   languageName: node
   linkType: hard
 
@@ -8818,7 +8819,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@4.0.5, typescript@~4.0.5":
+typescript@4.0.5:
   version: 4.0.5
   resolution: "typescript@npm:4.0.5"
   bin:
@@ -8838,7 +8839,7 @@ typescript@^3.9.5:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.0.5#builtin<compat/typescript>, typescript@patch:typescript@~4.0.5#builtin<compat/typescript>":
+"typescript@patch:typescript@4.0.5#builtin<compat/typescript>":
   version: 4.0.5
   resolution: "typescript@patch:typescript@npm%3A4.0.5#builtin<compat/typescript>::version=4.0.5&hash=5b02a2"
   bin:
