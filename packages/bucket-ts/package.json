@@ -11,7 +11,7 @@
     "release": "semantic-release -e semantic-release-monorepo"
   },
   "dependencies": {
-    "ajv": "^6.12.2",
+    "ajv": "^7.0.0",
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
