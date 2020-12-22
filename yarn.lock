@@ -558,10 +558,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/error@npm:^2.2.0":
+"@semantic-release/error@npm:^2.1.0, @semantic-release/error@npm:^2.2.0":
   version: 2.2.0
   resolution: "@semantic-release/error@npm:2.2.0"
   checksum: 96502012d8676def27ad904c23b4039cfcdaf2e82e86e6f51155dc391427e082da59e6d2c9eb653c87f1506af6b5c9468bc4261b476ad3bf13f310dc2245fe5d
+  languageName: node
+  linkType: hard
+
+"@semantic-release/git@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@semantic-release/git@npm:9.0.0"
+  dependencies:
+    "@semantic-release/error": ^2.1.0
+    aggregate-error: ^3.0.0
+    debug: ^4.0.0
+    dir-glob: ^3.0.0
+    execa: ^4.0.0
+    lodash: ^4.17.4
+    micromatch: ^4.0.0
+    p-reduce: ^2.0.0
+  peerDependencies:
+    semantic-release: ">=16.0.0 <18.0.0"
+  checksum: 8a96bc9e44f537b77515761b1958467b218e294eba7091c1b5e2ce8dd5390e60da9c87e7a91d097d1f24709f0ef980b9657d51a04ca01fbf23207fab9a425b00
   languageName: node
   linkType: hard
 
@@ -1558,6 +1576,7 @@ __metadata:
   resolution: "bucket-ts-monorepo@workspace:."
   dependencies:
     "@semantic-release/commit-analyzer": 8.0.1
+    "@semantic-release/git": ^9.0.0
     "@semantic-release/github": 7.2.0
     "@semantic-release/npm": 7.0.9
     "@semantic-release/release-notes-generator": 9.0.1
@@ -5618,7 +5637,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.2":
+"micromatch@npm:^4.0.0, micromatch@npm:^4.0.2":
   version: 4.0.2
   resolution: "micromatch@npm:4.0.2"
   dependencies:
