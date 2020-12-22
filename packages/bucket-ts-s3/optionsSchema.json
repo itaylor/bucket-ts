@@ -14,7 +14,7 @@
           "type": "string"
         },
         "endpoint": {
-          "description": "The url of the endpoint to use with the S3 client.  \n*Note:* This is only needed if you are using a non-AWS, S3 compatible server, (like [minio](https://min.io/))",
+          "description": "The url of the endpoint to use with the S3 client.   *Note:* This is only needed if you are using a non-AWS, S3 compatible server, (like [minio](https://min.io/))",
           "type": "string"
         },
         "region": {

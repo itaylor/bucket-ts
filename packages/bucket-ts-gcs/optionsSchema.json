@@ -46,7 +46,7 @@
           "type": "object"
         },
         "email": {
-          "description": "The email of the user of the GCS bucket\nNeeded when keyFilename is a .pem instead of a JSON.",
+          "description": "The email of the user of the GCS bucket Needed when keyFilename is a .pem instead of a JSON.",
           "type": "string"
         },
         "keyFilename": {
