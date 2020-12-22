@@ -15,7 +15,8 @@
   },
   "files": [
     "build/**",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "readme.md"
   ],
   "workspaces": [
     "packages/*",

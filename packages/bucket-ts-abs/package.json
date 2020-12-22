@@ -9,7 +9,7 @@
   "scripts": {
     "build-schema": "ts-json-schema-generator --path 'types.ts' --type 'ABSBucketOptions' > optionsSchema.json",
     "build": "yarn build-schema && tsc",
-    "release": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@types/node": "14.14.14",

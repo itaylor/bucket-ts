@@ -9,7 +9,7 @@
   "scripts": {
     "build-schema": "ts-json-schema-generator --path 'types.ts' --type 'S3BucketOptions' > optionsSchema.json",
     "build": "yarn build-schema && tsc",
-    "release": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release"
   },
   "devDependencies": {
     "@types/aws-sdk": "2.7.0",
