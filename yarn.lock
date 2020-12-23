@@ -1521,7 +1521,7 @@ __metadata:
     "@azure/storage-blob": ^12.3.0
     "@types/node": 14.14.14
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.81.0
+    ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
     bucket-ts: "*"
@@ -1544,7 +1544,7 @@ __metadata:
     bucket-ts: "portal:../bucket-ts"
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
-    ts-json-schema-generator: 0.81.0
+    ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
     bucket-ts: "*"
@@ -1564,7 +1564,7 @@ __metadata:
     "@google-cloud/storage": ^5.7.0
     "@types/node": 14.14.14
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.81.0
+    ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
     bucket-ts: "*"
@@ -1601,7 +1601,7 @@ __metadata:
     "@types/node": 14.14.14
     aws-sdk: ^2.816.0
     bucket-ts: "portal:../bucket-ts"
-    ts-json-schema-generator: 0.81.0
+    ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
     bucket-ts: "*"
@@ -8703,9 +8703,9 @@ resolve@^1.18.1:
   languageName: node
   linkType: hard
 
-"ts-json-schema-generator@npm:0.81.0":
-  version: 0.81.0
-  resolution: "ts-json-schema-generator@npm:0.81.0"
+"ts-json-schema-generator@npm:0.82.0":
+  version: 0.82.0
+  resolution: "ts-json-schema-generator@npm:0.82.0"
   dependencies:
     "@types/json-schema": ^7.0.6
     commander: ^6.2.1
@@ -8715,7 +8715,7 @@ resolve@^1.18.1:
     typescript: ~4.1.3
   bin:
     ts-json-schema-generator: bin/ts-json-schema-generator
-  checksum: e0ec4865fd50809a0e7d76f28a81534c4bc913f56cd7cc52420f21e371534d9693e285348efd4c21175635ca2a510c5f351c446023704f4fd5e60288d22bf698
+  checksum: 2b641b4dd9b09ad9cbd30da8b3038926f1a36da12152034ef35b6699d1ddcc413a36e3254586fdf17caef6add18fabaaab84a62270f7fc452784bc0c61c05581
   languageName: node
   linkType: hard
 
