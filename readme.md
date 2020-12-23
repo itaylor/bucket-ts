@@ -1,6 +1,5 @@
 # Bucket-TS
-
-* Simple, consistent, strongly-typed bucket storage client
+Simple, consistent, strongly-typed bucket storage client
 
 ## Goals
 * Consistent interface between bucket providers, with strong Typescript support
@@ -39,7 +38,6 @@ const bucketApi = bucketTs('gcs', {
   keyFilename: `path/to/a/gcs/keyfile.json` 
 });
 await bucketApi.uploadFile('fileToUpload.txt', 'name/of/file/in/bucket.txt');
-
 ```
 
 ## API Docs
