@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/mkdirp": "1.0.1",
-    "@types/node": "14.14.14",
+    "@types/node": "14.14.16",
     "@types/recursive-readdir": "2.2.0",
     "bucket-ts": "portal:../bucket-ts",
     "ts-json-schema-generator": "0.82.0",
