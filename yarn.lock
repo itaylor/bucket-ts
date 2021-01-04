@@ -833,17 +833,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.14.19":
+"@types/node@npm:14.14.19, @types/node@npm:^14.14.19":
   version: 14.14.19
   resolution: "@types/node@npm:14.14.19"
   checksum: 218ff4a93978cf41f4dd3d6aea7555d119873b50905889b1a3f14737f1e135a688672fa1f8e02ed856922fb828703bb064f7733f7e6998173c4714a7a3ec4c4c
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.14.14":
-  version: 14.14.14
-  resolution: "@types/node@npm:14.14.14"
-  checksum: dea8d257d49d68c65dafa6ebde9453bb61b67febc92ed8d7e38fce8b95f18d32ccffb3ab37021f9be8d1e5c65cd59cdb7dd8981d9b89b2be103b3012aee09fcf
   languageName: node
   linkType: hard
 
@@ -1028,15 +1021,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^7.0.2":
-  version: 7.0.2
-  resolution: "ajv@npm:7.0.2"
+"ajv@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "ajv@npm:7.0.3"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: 2fc3c37097ab6ee42b96e04863c8c382007eda4859ce50d89f53b7f555d4e5868795680b6debf73081cc28f160a2c7c0a6e66049fcf605bade64113a09fdb09c
+  checksum: 3236a5ce8c49fb831fe9c7ae67a6d7f732340f0dbd6e6add2c4e6556519ba274f84c4d68ccdfc19a6d038bf2333341562cd8a28272c71585cb663dd76b62f7ea
   languageName: node
   linkType: hard
 
@@ -1326,9 +1319,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:^2.816.0":
-  version: 2.816.0
-  resolution: "aws-sdk@npm:2.816.0"
+"aws-sdk@npm:^2.821.0":
+  version: 2.821.0
+  resolution: "aws-sdk@npm:2.821.0"
   dependencies:
     buffer: 4.9.2
     events: 1.1.1
@@ -1339,7 +1332,7 @@ __metadata:
     url: 0.10.3
     uuid: 3.3.2
     xml2js: 0.4.19
-  checksum: d9063a0f34c3546d3228bb8b37a4bcddd5cb7debf727a9162edd79c3c1a807074677e4bce0c7c34e2b0cf4c8dd6f4cba5ec95b699fea31ab3f8d6660845ff8bf
+  checksum: d0ef828692f4efbe038b573d060fc05dcc8bf74dfabb43de0c06bbcaa0d41c0bb8a864ced4a63fb3fe2edc854faeafb5868914b1f84c369fea3480ce7536a45a
   languageName: node
   linkType: hard
 
@@ -1553,13 +1546,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bucket-ts-abs@workspace:packages/bucket-ts-abs":
+"bucket-ts-abs@*, bucket-ts-abs@workspace:packages/bucket-ts-abs":
   version: 0.0.0-use.local
   resolution: "bucket-ts-abs@workspace:packages/bucket-ts-abs"
   dependencies:
     "@azure/storage-blob": ^12.3.0
     "@types/node": 14.14.19
-    bucket-ts: "portal:../bucket-ts"
+    bucket-ts: "*"
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
@@ -1567,20 +1560,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bucket-ts-folder@link:../packages/bucket-ts-folder::locator=bucket-ts-test%40workspace%3Atests":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts-folder@link:../packages/bucket-ts-folder::locator=bucket-ts-test%40workspace%3Atests"
-  languageName: node
-  linkType: soft
-
-"bucket-ts-folder@workspace:packages/bucket-ts-folder":
+"bucket-ts-folder@*, bucket-ts-folder@workspace:packages/bucket-ts-folder":
   version: 0.0.0-use.local
   resolution: "bucket-ts-folder@workspace:packages/bucket-ts-folder"
   dependencies:
     "@types/mkdirp": 1.0.1
     "@types/node": 14.14.19
     "@types/recursive-readdir": 2.2.0
-    bucket-ts: "portal:../bucket-ts"
+    bucket-ts: "*"
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
     ts-json-schema-generator: 0.82.0
@@ -1590,19 +1577,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bucket-ts-gcs@link:../packages/bucket-ts-gcs::locator=bucket-ts-test%40workspace%3Atests":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts-gcs@link:../packages/bucket-ts-gcs::locator=bucket-ts-test%40workspace%3Atests"
-  languageName: node
-  linkType: soft
-
-"bucket-ts-gcs@workspace:packages/bucket-ts-gcs":
+"bucket-ts-gcs@*, bucket-ts-gcs@workspace:packages/bucket-ts-gcs":
   version: 0.0.0-use.local
   resolution: "bucket-ts-gcs@workspace:packages/bucket-ts-gcs"
   dependencies:
     "@google-cloud/storage": ^5.7.0
     "@types/node": 14.14.19
-    bucket-ts: "portal:../bucket-ts"
+    bucket-ts: "*"
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
@@ -1627,20 +1608,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bucket-ts-s3@link:../packages/bucket-ts-s3::locator=bucket-ts-test%40workspace%3Atests":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts-s3@link:../packages/bucket-ts-s3::locator=bucket-ts-test%40workspace%3Atests"
-  languageName: node
-  linkType: soft
-
-"bucket-ts-s3@workspace:packages/bucket-ts-s3":
+"bucket-ts-s3@*, bucket-ts-s3@workspace:packages/bucket-ts-s3":
   version: 0.0.0-use.local
   resolution: "bucket-ts-s3@workspace:packages/bucket-ts-s3"
   dependencies:
     "@types/aws-sdk": 2.7.0
     "@types/node": 14.14.19
-    aws-sdk: ^2.816.0
-    bucket-ts: "portal:../bucket-ts"
+    aws-sdk: ^2.821.0
+    bucket-ts: "*"
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
@@ -1653,13 +1628,13 @@ __metadata:
   resolution: "bucket-ts-test@workspace:tests"
   dependencies:
     "@types/mkdirp": ^1.0.1
-    "@types/node": ^14.14.14
+    "@types/node": ^14.14.19
     "@types/rimraf": ^3.0.0
-    bucket-ts: "portal:../packages/bucket-ts"
-    bucket-ts-abs: "workspace:packages/bucket-ts-abs"
-    bucket-ts-folder: "link:../packages/bucket-ts-folder"
-    bucket-ts-gcs: "link:../packages/bucket-ts-gcs"
-    bucket-ts-s3: "link:../packages/bucket-ts-s3"
+    bucket-ts: "*"
+    bucket-ts-abs: "*"
+    bucket-ts-folder: "*"
+    bucket-ts-gcs: "*"
+    bucket-ts-s3: "*"
     mkdirp: ^1.0.4
     mocha: ^8.2.1
     mocha-ui-jest: ^0.4.0
@@ -1669,73 +1644,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bucket-ts@portal:../bucket-ts::locator=bucket-ts-abs%40workspace%3Apackages%2Fbucket-ts-abs":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-abs%40workspace%3Apackages%2Fbucket-ts-abs"
-  dependencies:
-    "@types/node": 14.14.19
-    "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
-    recursive-readdir: ^2.2.2
-    typescript: 4.1.3
-  languageName: node
-  linkType: soft
-
-"bucket-ts@portal:../bucket-ts::locator=bucket-ts-folder%40workspace%3Apackages%2Fbucket-ts-folder":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-folder%40workspace%3Apackages%2Fbucket-ts-folder"
-  dependencies:
-    "@types/node": 14.14.19
-    "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
-    recursive-readdir: ^2.2.2
-    typescript: 4.1.3
-  languageName: node
-  linkType: soft
-
-"bucket-ts@portal:../bucket-ts::locator=bucket-ts-gcs%40workspace%3Apackages%2Fbucket-ts-gcs":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-gcs%40workspace%3Apackages%2Fbucket-ts-gcs"
-  dependencies:
-    "@types/node": 14.14.19
-    "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
-    recursive-readdir: ^2.2.2
-    typescript: 4.1.3
-  languageName: node
-  linkType: soft
-
-"bucket-ts@portal:../bucket-ts::locator=bucket-ts-s3%40workspace%3Apackages%2Fbucket-ts-s3":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts@portal:../bucket-ts::locator=bucket-ts-s3%40workspace%3Apackages%2Fbucket-ts-s3"
-  dependencies:
-    "@types/node": 14.14.19
-    "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
-    recursive-readdir: ^2.2.2
-    typescript: 4.1.3
-  languageName: node
-  linkType: soft
-
-"bucket-ts@portal:../packages/bucket-ts::locator=bucket-ts-test%40workspace%3Atests":
-  version: 0.0.0-use.local
-  resolution: "bucket-ts@portal:../packages/bucket-ts::locator=bucket-ts-test%40workspace%3Atests"
-  dependencies:
-    "@types/node": 14.14.19
-    "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
-    recursive-readdir: ^2.2.2
-    typescript: 4.1.3
-  languageName: node
-  linkType: soft
-
-"bucket-ts@workspace:packages/bucket-ts":
+"bucket-ts@*, bucket-ts@workspace:packages/bucket-ts":
   version: 0.0.0-use.local
   resolution: "bucket-ts@workspace:packages/bucket-ts"
   dependencies:
     "@types/node": 14.14.19
     "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.2
+    ajv: ^7.0.3
     recursive-readdir: ^2.2.2
     typescript: 4.1.3
   languageName: unknown

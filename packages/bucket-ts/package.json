@@ -11,7 +11,7 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "ajv": "^7.0.2",
+    "ajv": "^7.0.3",
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {

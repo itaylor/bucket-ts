@@ -10,15 +10,15 @@
     "test": "mocha --require ./testLoader.js --ui jest *.test.ts"
   },
   "dependencies": {
-    "bucket-ts": "portal:../packages/bucket-ts",
-    "bucket-ts-abs": "workspace:packages/bucket-ts-abs",
-    "bucket-ts-folder": "link:../packages/bucket-ts-folder",
-    "bucket-ts-gcs": "link:../packages/bucket-ts-gcs",
-    "bucket-ts-s3": "link:../packages/bucket-ts-s3"
+    "bucket-ts": "*",
+    "bucket-ts-abs": "*",
+    "bucket-ts-folder": "*",
+    "bucket-ts-gcs": "*",
+    "bucket-ts-s3": "*"
   },
   "devDependencies": {
     "@types/mkdirp": "^1.0.1",
-    "@types/node": "^14.14.14",
+    "@types/node": "^14.14.19",
     "@types/rimraf": "^3.0.0",
     "mkdirp": "^1.0.4",
     "mocha": "^8.2.1",
