@@ -35,5 +35,13 @@
     "semantic-release": "17.3.1",
     "semantic-release-monorepo": "7.0.3",
     "typedoc": "0.17.0-3"
+  },
+  "dependenciesMeta": {
+    "multi-semantic-release@2.6.0": {
+      "unplugged": true
+    },
+    "semantic-release@17.3.1": {
+      "unplugged": true
+    }
   }
 }
