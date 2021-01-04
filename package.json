@@ -1,6 +1,6 @@
 {
   "name": "bucket-ts-monorepo",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "monorepo for bucket-ts modules",
   "author": "ian.b.taylor@gmail.com",
   "license": "MIT",
