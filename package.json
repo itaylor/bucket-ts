@@ -11,7 +11,7 @@
     "build": "yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test",
     "docs": "typedoc",
-    "release": "semantic-release"
+    "release": "multi-semantic-release --debug --dry-run"
   },
   "files": [
     "build/**",
