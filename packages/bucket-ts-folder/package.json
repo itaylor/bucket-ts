@@ -1,6 +1,6 @@
 {
   "name": "bucket-ts-folder",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "author": "ian.b.taylor@gmail.com",
   "license": "MIT",
   "repository": "https://github.com/itaylor/bucket-ts",
@@ -15,7 +15,7 @@
     "@types/mkdirp": "1.0.1",
     "@types/node": "14.14.19",
     "@types/recursive-readdir": "2.2.0",
-    "bucket-ts": "*",
+    "bucket-ts": "1.0.0",
     "ts-json-schema-generator": "0.82.0",
     "typescript": "4.1.3"
   },
@@ -24,6 +24,6 @@
     "recursive-readdir": "^2.2.2"
   },
   "peerDependencies": {
-    "bucket-ts": "*"
+    "bucket-ts": "1.0.0"
   }
 }
