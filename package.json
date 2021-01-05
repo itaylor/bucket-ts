@@ -8,7 +8,7 @@
   "scripts": {
     "start-minio": "./start-minio.sh",
     "load-env": "source ~/bucket-ts.env",
-    "build": "yarn workspaces foreach run build",
+    "build": "cp readme.md packages/bucket-ts/readme.md && yarn workspaces foreach run build",
     "test": "yarn workspaces foreach run test",
     "docs": "typedoc",
     "release": "multi-semantic-release --debug"
