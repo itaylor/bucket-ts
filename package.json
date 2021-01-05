@@ -27,6 +27,7 @@
     "typescript": "4.1.3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "5.0.1",
     "@semantic-release/commit-analyzer": "8.0.1",
     "@semantic-release/git": "9.0.0",
     "@semantic-release/github": "7.2.0",
@@ -35,13 +36,5 @@
     "semantic-release": "17.3.1",
     "semantic-release-monorepo": "7.0.3",
     "typedoc": "0.17.0-3"
-  },
-  "dependenciesMeta": {
-    "multi-semantic-release@2.6.0": {
-      "unplugged": true
-    },
-    "semantic-release@17.3.1": {
-      "unplugged": true
-    }
   }
 }
