@@ -1567,48 +1567,82 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bucket-ts-abs@1.0.1, bucket-ts-abs@workspace:packages/bucket-ts-abs":
+"bucket-ts-abs@npm:1.0.1":
+  version: 1.0.1
+  resolution: "bucket-ts-abs@npm:1.0.1"
+  dependencies:
+    "@azure/storage-blob": ^12.3.0
+  peerDependencies:
+    bucket-ts: 1.0.3
+  checksum: 6c36d6f5cc39225457bef32ba0ba0c3dca5d769639bb6036a6d91377866277ab6caa9ac40163a96e82dad8ac8866deaccff2b8bad82545376256a5805a9d933a
+  languageName: node
+  linkType: hard
+
+"bucket-ts-abs@workspace:packages/bucket-ts-abs":
   version: 0.0.0-use.local
   resolution: "bucket-ts-abs@workspace:packages/bucket-ts-abs"
   dependencies:
     "@azure/storage-blob": ^12.3.0
     "@types/node": 14.14.20
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
   languageName: unknown
   linkType: soft
 
-"bucket-ts-folder@1.0.1, bucket-ts-folder@workspace:packages/bucket-ts-folder":
+"bucket-ts-folder@npm:1.0.1":
+  version: 1.0.1
+  resolution: "bucket-ts-folder@npm:1.0.1"
+  dependencies:
+    mkdirp: ^1.0.4
+    recursive-readdir: ^2.2.2
+  peerDependencies:
+    bucket-ts: 1.0.3
+  checksum: 9df77471971fef3cbd97467d19ce31cccf1dfcaaaa1bb599f2ba8a096a52d4087c5f0d2a35783ec8fd18c385dd9e15df21d55daa9055efb4a109fe4f3bab2803
+  languageName: node
+  linkType: hard
+
+"bucket-ts-folder@workspace:packages/bucket-ts-folder":
   version: 0.0.0-use.local
   resolution: "bucket-ts-folder@workspace:packages/bucket-ts-folder"
   dependencies:
     "@types/mkdirp": 1.0.1
     "@types/node": 14.14.20
     "@types/recursive-readdir": 2.2.0
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
     mkdirp: ^1.0.4
     recursive-readdir: ^2.2.2
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
   languageName: unknown
   linkType: soft
 
-"bucket-ts-gcs@1.0.1, bucket-ts-gcs@workspace:packages/bucket-ts-gcs":
+"bucket-ts-gcs@npm:1.0.1":
+  version: 1.0.1
+  resolution: "bucket-ts-gcs@npm:1.0.1"
+  dependencies:
+    "@google-cloud/storage": ^5.7.0
+  peerDependencies:
+    bucket-ts: 1.0.3
+  checksum: ce5f8102128e21a4c25f2d7372dd7f7d772f507ab0dcc1f290257db4dacf68520a830a21c7ab5d7d98b85fdb188a30ebd993670878ae1ab334598d9952b74323
+  languageName: node
+  linkType: hard
+
+"bucket-ts-gcs@workspace:packages/bucket-ts-gcs":
   version: 0.0.0-use.local
   resolution: "bucket-ts-gcs@workspace:packages/bucket-ts-gcs"
   dependencies:
     "@google-cloud/storage": ^5.7.0
     "@types/node": 14.14.20
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
   languageName: unknown
   linkType: soft
 
@@ -1624,24 +1658,35 @@ __metadata:
     "@semantic-release/release-notes-generator": 9.0.1
     multi-semantic-release: 2.6.0
     semantic-release: 17.3.1
-    semantic-release-monorepo: 7.0.3
+    semantic-release-monorepo: 7.0.4
     typedoc: 0.17.0-3
     typescript: 4.1.3
   languageName: unknown
   linkType: soft
 
-"bucket-ts-s3@1.0.1, bucket-ts-s3@workspace:packages/bucket-ts-s3":
+"bucket-ts-s3@npm:1.0.1":
+  version: 1.0.1
+  resolution: "bucket-ts-s3@npm:1.0.1"
+  dependencies:
+    aws-sdk: ^2.821.0
+  peerDependencies:
+    bucket-ts: 1.0.3
+  checksum: 666c294f705cc40bc37f8f4c2f569643e34bad98e2d33a5ac3c2baf7c1e1e0f992c0bfdeff9cf6cdcd3a146dddfb9f8656e5d60842ae0b18563c81e8fd7a2469
+  languageName: node
+  linkType: hard
+
+"bucket-ts-s3@workspace:packages/bucket-ts-s3":
   version: 0.0.0-use.local
   resolution: "bucket-ts-s3@workspace:packages/bucket-ts-s3"
   dependencies:
     "@types/aws-sdk": 2.7.0
     "@types/node": 14.14.20
     aws-sdk: ^2.821.0
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
     ts-json-schema-generator: 0.82.0
     typescript: 4.1.3
   peerDependencies:
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
   languageName: unknown
   linkType: soft
 
@@ -1652,7 +1697,7 @@ __metadata:
     "@types/mkdirp": ^1.0.1
     "@types/node": ^14.14.19
     "@types/rimraf": ^3.0.0
-    bucket-ts: 1.0.3
+    bucket-ts: 1.0.4
     bucket-ts-abs: 1.0.1
     bucket-ts-folder: 1.0.1
     bucket-ts-gcs: 1.0.1
@@ -1666,7 +1711,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bucket-ts@1.0.3, bucket-ts@workspace:packages/bucket-ts":
+"bucket-ts@1.0.4, bucket-ts@workspace:packages/bucket-ts":
   version: 0.0.0-use.local
   resolution: "bucket-ts@workspace:packages/bucket-ts"
   dependencies:
@@ -7819,9 +7864,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"semantic-release-monorepo@npm:7.0.3":
-  version: 7.0.3
-  resolution: "semantic-release-monorepo@npm:7.0.3"
+"semantic-release-monorepo@npm:7.0.4":
+  version: 7.0.4
+  resolution: "semantic-release-monorepo@npm:7.0.4"
   dependencies:
     debug: ^3.1.0
     execa: ^0.8.0
@@ -7832,7 +7877,7 @@ fsevents@~2.1.2:
     semantic-release-plugin-decorators: ^3.0.0
   peerDependencies:
     semantic-release: ">=15.11.x"
-  checksum: 7cbd10ecce578dab3644752beb04bd362213ab88f6461bcf359a71a958dc287a8e13c4c125b59c944bc4687c9b019da031b740be2598549dced45d473041be2e
+  checksum: d61f61581767ac2b262950707295c24c0bbcd43b216524322ea8306a423bf6435011ff00f1bb3ca8377b5c29bea0fe899147cbee409994fc040da53b7e8af6a5
   languageName: node
   linkType: hard
 
