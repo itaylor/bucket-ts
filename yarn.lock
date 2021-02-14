@@ -847,10 +847,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.14.27":
-  version: 14.14.27
-  resolution: "@types/node@npm:14.14.27"
-  checksum: efc78cf6e698e09925a2542bbea932dfe092408f4ce39b8f260b71df502221d76c925fd3227bc1f7427edd9cfb6f8c81c68a56b9ab690f08425e7e6e177e61e0
+"@types/node@npm:14.14.28":
+  version: 14.14.28
+  resolution: "@types/node@npm:14.14.28"
+  checksum: e750df4d5e93c639d04100e7d54d9e416ecc649d4d7951ac1d5b82d092c556f6e7775a191995e06d6def65ae7bc25533d188fe122dc660724d119ce3ddae2cea
   languageName: node
   linkType: hard
 
@@ -1583,7 +1583,7 @@ __metadata:
   resolution: "bucket-ts-abs@workspace:packages/bucket-ts-abs"
   dependencies:
     "@azure/storage-blob": ^12.3.0
-    "@types/node": 14.14.27
+    "@types/node": 14.14.28
     bucket-ts: 1.0.4
     ts-json-schema-generator: 0.84.0
     typescript: 4.1.5
@@ -1609,7 +1609,7 @@ __metadata:
   resolution: "bucket-ts-folder@workspace:packages/bucket-ts-folder"
   dependencies:
     "@types/mkdirp": 1.0.1
-    "@types/node": 14.14.27
+    "@types/node": 14.14.28
     "@types/recursive-readdir": 2.2.0
     bucket-ts: 1.0.4
     mkdirp: ^1.0.4
@@ -1637,7 +1637,7 @@ __metadata:
   resolution: "bucket-ts-gcs@workspace:packages/bucket-ts-gcs"
   dependencies:
     "@google-cloud/storage": ^5.7.0
-    "@types/node": 14.14.27
+    "@types/node": 14.14.28
     bucket-ts: 1.0.4
     ts-json-schema-generator: 0.84.0
     typescript: 4.1.5
@@ -1680,7 +1680,7 @@ __metadata:
   resolution: "bucket-ts-s3@workspace:packages/bucket-ts-s3"
   dependencies:
     "@types/aws-sdk": 2.7.0
-    "@types/node": 14.14.27
+    "@types/node": 14.14.28
     aws-sdk: ^2.821.0
     bucket-ts: 1.0.4
     ts-json-schema-generator: 0.84.0
@@ -1715,7 +1715,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts@workspace:packages/bucket-ts"
   dependencies:
-    "@types/node": 14.14.27
+    "@types/node": 14.14.28
     "@types/recursive-readdir": 2.2.0
     ajv: ^7.0.3
     recursive-readdir: ^2.2.2
