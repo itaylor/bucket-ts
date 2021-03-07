@@ -1409,31 +1409,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bash-glob@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "bash-glob@npm:2.0.0"
-  dependencies:
-    bash-path: ^1.0.1
-    component-emitter: ^1.2.1
-    cross-spawn: ^5.1.0
-    each-parallel-async: ^1.0.0
-    extend-shallow: ^2.0.1
-    is-extglob: ^2.1.1
-    is-glob: ^4.0.0
-  checksum: 06a6cfe2ef6bc9cf5f373b3b205d63d6fde513e4778500de7d10758f6abaf717c80d9fb8134d07a3a95775e5095379ffca6061e048593b83eaee62d2bcd5ae59
-  languageName: node
-  linkType: hard
-
-"bash-path@npm:^1.0.1":
-  version: 1.0.3
-  resolution: "bash-path@npm:1.0.3"
-  dependencies:
-    arr-union: ^3.1.0
-    is-windows: ^1.0.1
-  checksum: e8fc601a917dac92b29bfb33bba4d4d2a6abcc277c04d768be22df3be81401fb8e738ab41797358ba7b77ea35b7e306d5729648d04a4c2b0f6c8f686c164ca58
-  languageName: node
-  linkType: hard
-
 "bcrypt-pbkdf@npm:^1.0.0":
   version: 1.0.2
   resolution: "bcrypt-pbkdf@npm:1.0.2"
@@ -1656,7 +1631,7 @@ __metadata:
     "@semantic-release/github": 7.2.0
     "@semantic-release/npm": 7.0.10
     "@semantic-release/release-notes-generator": 9.0.1
-    multi-semantic-release: 2.6.0
+    multi-semantic-release: 2.7.0
     semantic-release: 17.4.1
     semantic-release-monorepo: 7.0.4
     typedoc: 0.17.0-3
@@ -2393,7 +2368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^5.0.1, cross-spawn@npm:^5.1.0":
+"cross-spawn@npm:^5.0.1":
   version: 5.1.0
   resolution: "cross-spawn@npm:5.1.0"
   dependencies:
@@ -2781,13 +2756,6 @@ __metadata:
     readable-stream: ^3.1.1
     stream-shift: ^1.0.0
   checksum: 955470757e3fbacf57ebb404c1605fc2a517dff27a1f5b1e3f86d00d32b22d8ce962657bf120f9c2eb585c47441b7b6a5d1a621c22d627dd6936dda17801828a
-  languageName: node
-  linkType: hard
-
-"each-parallel-async@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "each-parallel-async@npm:1.0.0"
-  checksum: e9936b7f52a73bda7e51ae50024c15f57a612ccfec122a74b74615fefc9ac6c9106a787dfca460b351f490feb0b4b531558dd7cbd285008961b2f8efeb899e59
   languageName: node
   linkType: hard
 
@@ -3764,6 +3732,20 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"globby@npm:11.0.2":
+  version: 11.0.2
+  resolution: "globby@npm:11.0.2"
+  dependencies:
+    array-union: ^2.1.0
+    dir-glob: ^3.0.1
+    fast-glob: ^3.1.1
+    ignore: ^5.1.4
+    merge2: ^1.3.0
+    slash: ^3.0.0
+  checksum: d23f2a6b8897b97fb27422cde243e0fd406ebbaa821929293b27c977d169884f8112494cda4f456a51d0ec1e133e3ac703ec24bfed484e327305ea34a665eb06
+  languageName: node
+  linkType: hard
+
 "globby@npm:^11.0.0, globby@npm:^11.0.1":
   version: 11.0.1
   resolution: "globby@npm:11.0.1"
@@ -4504,7 +4486,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"is-glob@npm:^4.0.0, is-glob@npm:^4.0.1, is-glob@npm:~4.0.1":
+"is-glob@npm:^4.0.1, is-glob@npm:~4.0.1":
   version: 4.0.1
   resolution: "is-glob@npm:4.0.1"
   dependencies:
@@ -4675,7 +4657,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"is-windows@npm:^1.0.1, is-windows@npm:^1.0.2":
+"is-windows@npm:^1.0.2":
   version: 1.0.2
   resolution: "is-windows@npm:1.0.2"
   checksum: dd1ed8339a28c68fb52f05931c832488dafc90063e53b97a69ead219a5584d7f3e6e564731c2f983962ff5403afeb05365d88ce9af34c8dae76a14911020d73a
@@ -6092,11 +6074,10 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"multi-semantic-release@npm:2.6.0":
-  version: 2.6.0
-  resolution: "multi-semantic-release@npm:2.6.0"
+"multi-semantic-release@npm:2.7.0":
+  version: 2.7.0
+  resolution: "multi-semantic-release@npm:2.7.0"
   dependencies:
-    bash-glob: ^2.0.0
     blork: ^9.2.2
     cosmiconfig: ^7.0.0
     debug: ^4.3.1
@@ -6105,6 +6086,7 @@ fsevents@~2.1.2:
     execa: ^4.1.0
     get-stream: ^6.0.0
     git-log-parser: ^1.2.0
+    globby: 11.0.2
     lodash: ^4.17.20
     meow: ^8.0.0
     promise-events: ^0.2.1
@@ -6114,7 +6096,7 @@ fsevents@~2.1.2:
     stream-buffers: ^3.0.2
   bin:
     multi-semantic-release: bin/cli.js
-  checksum: b786f7655bf9bb28c13ec63e427319676530708932ee4bc4622bf1836e4b8fc37e7d3f948ae46aec96fa28517179b5c4851ebece9f54c8132ada3cf8a598f708
+  checksum: 3f01cf904d559f4c1a811958bea432e6cdc448157dad2966a2351a96277308326c99b356a49c2bfbf0ce498920e76909d58ae715fb60dcbb694f503a816e0f57
   languageName: node
   linkType: hard
 
