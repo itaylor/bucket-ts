@@ -1103,15 +1103,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "ajv@npm:7.0.3"
+"ajv@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "ajv@npm:8.0.0"
   dependencies:
     fast-deep-equal: ^3.1.1
     json-schema-traverse: ^1.0.0
     require-from-string: ^2.0.2
     uri-js: ^4.2.2
-  checksum: 3236a5ce8c49fb831fe9c7ae67a6d7f732340f0dbd6e6add2c4e6556519ba274f84c4d68ccdfc19a6d038bf2333341562cd8a28272c71585cb663dd76b62f7ea
+  checksum: 41cfb081e54c244fad7f67a14725161f085c27e75cc4f18f2e3f64b8d408788a065815d7dabf921c7ef620479da5a8d886c2d62caeaa6c38649765b4cf4d67ea
   languageName: node
   linkType: hard
 
@@ -1753,7 +1753,7 @@ __metadata:
   dependencies:
     "@types/node": 14.14.37
     "@types/recursive-readdir": 2.2.0
-    ajv: ^7.0.3
+    ajv: ^8.0.0
     recursive-readdir: ^2.2.2
     typescript: 4.1.5
   languageName: unknown
