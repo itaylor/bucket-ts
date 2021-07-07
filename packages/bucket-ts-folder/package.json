@@ -12,7 +12,7 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@types/mkdirp": "1.0.1",
+    "@types/mkdirp": "1.0.2",
     "@types/node": "14.17.4",
     "@types/recursive-readdir": "2.2.0",
     "bucket-ts": "1.0.5",
