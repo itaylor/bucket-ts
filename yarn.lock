@@ -1039,7 +1039,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mkdirp@npm:1.0.1, @types/mkdirp@npm:^1.0.1":
+"@types/mkdirp@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@types/mkdirp@npm:1.0.2"
+  dependencies:
+    "@types/node": "*"
+  checksum: d65cbfecb1bcb1df8d09f26602da7de9e0a0f57aa977d5d832d4d57889292d8f14e9c59409b5dcc602c3ed8a1fb5c05a57f1e62813e43a5f5f9f39584561a786
+  languageName: node
+  linkType: hard
+
+"@types/mkdirp@npm:^1.0.1":
   version: 1.0.1
   resolution: "@types/mkdirp@npm:1.0.1"
   dependencies:
@@ -1849,7 +1858,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts-folder@workspace:packages/bucket-ts-folder"
   dependencies:
-    "@types/mkdirp": 1.0.1
+    "@types/mkdirp": 1.0.2
     "@types/node": 14.17.4
     "@types/recursive-readdir": 2.2.0
     bucket-ts: 1.0.5
