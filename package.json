@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "multi-semantic-release": "2.8.2",
-    "typescript": "4.1.5"
+    "typescript": "4.3.5"
   },
   "devDependencies": {
     "@semantic-release/changelog": "5.0.1",
