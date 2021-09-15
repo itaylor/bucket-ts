@@ -23,7 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "multi-semantic-release": "2.8.5",
+    "multi-semantic-release": "2.9.0",
     "typescript": "4.1.5"
   },
   "devDependencies": {
