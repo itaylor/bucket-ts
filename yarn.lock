@@ -917,7 +917,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:10.0.0, @semantic-release/release-notes-generator@npm:^10.0.0":
+"@semantic-release/release-notes-generator@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@semantic-release/release-notes-generator@npm:10.0.1"
+  dependencies:
+    conventional-changelog-angular: ^5.0.0
+    conventional-changelog-writer: ^4.0.0
+    conventional-commits-filter: ^2.0.0
+    conventional-commits-parser: ^3.0.0
+    debug: ^4.0.0
+    get-stream: ^6.0.0
+    import-from: ^4.0.0
+    into-stream: ^6.0.0
+    lodash: ^4.17.4
+    read-pkg-up: ^7.0.0
+  peerDependencies:
+    semantic-release: ">=18.0.0-beta.1"
+  checksum: f8f0b21f1759251f2312192293e20c041410968a87f75d41c774fb21a50abde2eb41946574a1d768d09c4e4dc27d2b431a9a5ade85f2a64cd8142e6b18b8bad9
+  languageName: node
+  linkType: hard
+
+"@semantic-release/release-notes-generator@npm:^10.0.0":
   version: 10.0.0
   resolution: "@semantic-release/release-notes-generator@npm:10.0.0"
   dependencies:
@@ -1929,7 +1949,7 @@ __metadata:
     "@semantic-release/git": 9.0.1
     "@semantic-release/github": 8.0.0
     "@semantic-release/npm": 8.0.0
-    "@semantic-release/release-notes-generator": 10.0.0
+    "@semantic-release/release-notes-generator": 10.0.1
     multi-semantic-release: 2.9.0
     semantic-release: 18.0.0
     semantic-release-monorepo: 7.0.5
@@ -4623,6 +4643,13 @@ fsevents@~2.1.2:
   dependencies:
     resolve-from: ^5.0.0
   checksum: ba66d42da541286fe50afe800a506534560c067eac7fa1c5fa83b4ea69eb92952adf6bff4ae6a3ea2e45780a874aa0341e4101e6ebc3f9b8fd6b83ac29fafe1b
+  languageName: node
+  linkType: hard
+
+"import-from@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "import-from@npm:4.0.0"
+  checksum: 22bf9166d92c085dea4ad22a4996a651dead9d931e06b18aded82024344c182409c48e12bf9d45be0fe07ca3936d12fbf3539acffd3a97bc28eddbf1202ca88a
   languageName: node
   linkType: hard
 
