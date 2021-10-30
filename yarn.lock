@@ -739,17 +739,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/changelog@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@semantic-release/changelog@npm:6.0.0"
+"@semantic-release/changelog@npm:6.0.1":
+  version: 6.0.1
+  resolution: "@semantic-release/changelog@npm:6.0.1"
   dependencies:
-    "@semantic-release/error": ^2.1.0
+    "@semantic-release/error": ^3.0.0
     aggregate-error: ^3.0.0
     fs-extra: ^9.0.0
     lodash: ^4.17.4
   peerDependencies:
     semantic-release: ">=18.0.0"
-  checksum: 60fb2d8fe315b9e7bed381b7318032e2af07816ac190f67162e7dbb3dbe52cc9a3bae4fc81fed8aa02c78cd7644a28074753e406f4b516bf8bb287db3ba958c6
+  checksum: 1fde96420d3cb03621bb1524041905d071bec72b9ffb5d35615ffc4e02e0a466222e28903bb4471a67a25c777edca47e6a54844a7cd348a9fc2c566fdc2d29df
   languageName: node
   linkType: hard
 
@@ -804,7 +804,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/error@npm:^2.1.0, @semantic-release/error@npm:^2.2.0":
+"@semantic-release/error@npm:^2.2.0":
   version: 2.2.0
   resolution: "@semantic-release/error@npm:2.2.0"
   checksum: 96502012d8676def27ad904c23b4039cfcdaf2e82e86e6f51155dc391427e082da59e6d2c9eb653c87f1506af6b5c9468bc4261b476ad3bf13f310dc2245fe5d
@@ -818,11 +818,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/git@npm:10.0.0":
-  version: 10.0.0
-  resolution: "@semantic-release/git@npm:10.0.0"
+"@semantic-release/git@npm:10.0.1":
+  version: 10.0.1
+  resolution: "@semantic-release/git@npm:10.0.1"
   dependencies:
-    "@semantic-release/error": ^2.1.0
+    "@semantic-release/error": ^3.0.0
     aggregate-error: ^3.0.0
     debug: ^4.0.0
     dir-glob: ^3.0.0
@@ -832,7 +832,7 @@ __metadata:
     p-reduce: ^2.0.0
   peerDependencies:
     semantic-release: ">=18.0.0"
-  checksum: bea4d883edbfb2be6117aa2f5b5e55822a8611ca2109ebd783836b74fb7248fccd579bc4442e7a9507fba97aa8ea8c3cf09bbf83e6f4ff82ffad638732a0c0ec
+  checksum: eaadd446a9cdc897962e5801ff2702ad082ba89ef0974a3bf410ad26271aeb574246bc6825dc69ca5e8e97f74bf28d72244df161a5314ac904d1efb5e5836a7c
   languageName: node
   linkType: hard
 
@@ -2017,9 +2017,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bucket-ts-monorepo@workspace:."
   dependencies:
-    "@semantic-release/changelog": 6.0.0
+    "@semantic-release/changelog": 6.0.1
     "@semantic-release/commit-analyzer": 9.0.1
-    "@semantic-release/git": 10.0.0
+    "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.1
     "@semantic-release/npm": 8.0.2
     "@semantic-release/release-notes-generator": 10.0.2
