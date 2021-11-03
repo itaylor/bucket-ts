@@ -836,9 +836,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/github@npm:8.0.1":
-  version: 8.0.1
-  resolution: "@semantic-release/github@npm:8.0.1"
+"@semantic-release/github@npm:8.0.2":
+  version: 8.0.2
+  resolution: "@semantic-release/github@npm:8.0.2"
   dependencies:
     "@octokit/rest": ^18.0.0
     "@semantic-release/error": ^2.2.0
@@ -852,13 +852,13 @@ __metadata:
     https-proxy-agent: ^5.0.0
     issue-parser: ^6.0.0
     lodash: ^4.17.4
-    mime: ^2.4.3
+    mime: ^3.0.0
     p-filter: ^2.0.0
     p-retry: ^4.0.0
     url-join: ^4.0.0
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 8182a43370a2cce888ef0fe948f6dadc0da84c164f6e3efc2b30ed8743e0897ccdec6c9e16368b0dda4c71350ada2d4718971c0a4b83270fb580db64dd6c79cb
+  checksum: 91f965c79977d2a536f67241d576c647092f8f0814dd5df6abb273547f49eee63027457d90e251ef91629665393ec70b1c57a5e4281525015ef5b801fbd9ffc3
   languageName: node
   linkType: hard
 
@@ -2020,7 +2020,7 @@ __metadata:
     "@semantic-release/changelog": 6.0.1
     "@semantic-release/commit-analyzer": 9.0.1
     "@semantic-release/git": 10.0.1
-    "@semantic-release/github": 8.0.1
+    "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.2
     "@semantic-release/release-notes-generator": 10.0.2
     multi-semantic-release: 2.9.2
@@ -6619,6 +6619,15 @@ fsevents@~2.1.2:
   bin:
     mime: cli.js
   checksum: 319ec3858894aa9befa9da90e33c4422506689f1e3e7c939095df68abe848050a51070c78a31061769d9192051a8c9f33d14d6771dc0f2ff309fe846898e0807
+  languageName: node
+  linkType: hard
+
+"mime@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "mime@npm:3.0.0"
+  bin:
+    mime: cli.js
+  checksum: 92e15d00a87a282fde7979a03016d900aaeb68ed5155bffd1477dd26765728a5fbdc51ca54c9f5a44f7a45cb6d0781291efb29402512428eafe72df152ddb828
   languageName: node
   linkType: hard
 
