@@ -914,9 +914,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:8.0.2":
-  version: 8.0.2
-  resolution: "@semantic-release/npm@npm:8.0.2"
+"@semantic-release/npm@npm:8.0.3":
+  version: 8.0.3
+  resolution: "@semantic-release/npm@npm:8.0.3"
   dependencies:
     "@semantic-release/error": ^3.0.0
     aggregate-error: ^3.0.0
@@ -933,7 +933,7 @@ __metadata:
     tempy: ^1.0.0
   peerDependencies:
     semantic-release: ">=18.0.0"
-  checksum: 072bfa8967ecbb03c5661ede5b9d3a17a670617606a5494346fb6628a9309252fce43d7c208f50b25ad797748260c1d67591819f635d251a0bfa4b3b55f603c2
+  checksum: 25d0e16e6bfea86cc2f1dfbac058d7040c9e09222f17a482dcd9498c594e2171052437f349c242e493a347debf7791da2fc97b24dcff6c773883292400649a0f
   languageName: node
   linkType: hard
 
@@ -2021,7 +2021,7 @@ __metadata:
     "@semantic-release/commit-analyzer": 9.0.1
     "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.2
-    "@semantic-release/npm": 8.0.2
+    "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
     multi-semantic-release: 2.9.2
     semantic-release: 18.0.0
