@@ -2023,7 +2023,7 @@ __metadata:
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
-    multi-semantic-release: 2.9.2
+    multi-semantic-release: 2.10.0
     semantic-release: 18.0.0
     semantic-release-monorepo: 7.0.5
     typedoc: 0.17.0-3
@@ -6939,9 +6939,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"multi-semantic-release@npm:2.9.2":
-  version: 2.9.2
-  resolution: "multi-semantic-release@npm:2.9.2"
+"multi-semantic-release@npm:2.10.0":
+  version: 2.10.0
+  resolution: "multi-semantic-release@npm:2.10.0"
   dependencies:
     "@manypkg/get-packages": ^1.1.1
     blork: ^9.3.0
@@ -6963,7 +6963,7 @@ fsevents@~2.1.2:
     unixify: ^1.0.0
   bin:
     multi-semantic-release: bin/cli.js
-  checksum: 7e14cb82a1a9739d4f2ec3444478064429ebfefe1e029ab00375e1ae2b37e3a316e5030a6bc1f0ff09ea6e6555aaa2b56fecbf3ecaa319e60c197ae0c146fecc
+  checksum: fbee85a28b04a112220678679bd995385e9e97a2f148ca90b5e4d3434518fe34d3e7fdc3eb3aa76c67edcb09da54a317dce733284c0add9839554f08a6d8f498
   languageName: node
   linkType: hard
 
