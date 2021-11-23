@@ -761,20 +761,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/commit-analyzer@npm:9.0.1":
-  version: 9.0.1
-  resolution: "@semantic-release/commit-analyzer@npm:9.0.1"
+"@semantic-release/commit-analyzer@npm:9.0.2":
+  version: 9.0.2
+  resolution: "@semantic-release/commit-analyzer@npm:9.0.2"
   dependencies:
     conventional-changelog-angular: ^5.0.0
     conventional-commits-filter: ^2.0.0
-    conventional-commits-parser: ^3.0.7
+    conventional-commits-parser: ^3.2.3
     debug: ^4.0.0
     import-from: ^4.0.0
     lodash: ^4.17.4
     micromatch: ^4.0.2
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 989ef9658b1cae746f4e9806ebe427670a6c8717a1066aa02c7338e749a1afe39413e1576c345969ec83c2e7813e68dc5aad8a3a8d22fffde023836b7ed12298
+  checksum: 46292e4a42b0825a210d089824e9b8f744cd4e686759160453074dc0bef5e077520a5725961757716e069cbc926ed742ed578094fb7dc6a5f0b63b4694bf2b4a
   languageName: node
   linkType: hard
 
@@ -2026,7 +2026,7 @@ __metadata:
   resolution: "bucket-ts-monorepo@workspace:."
   dependencies:
     "@semantic-release/changelog": 6.0.1
-    "@semantic-release/commit-analyzer": 9.0.1
+    "@semantic-release/commit-analyzer": 9.0.2
     "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
@@ -2784,6 +2784,22 @@ __metadata:
   bin:
     conventional-commits-parser: cli.js
   checksum: 4ffefd705767cb683cca2e733efe55148ae74623221e57bd5e600e68ed4a31beec83695249fcb583fe58da35280aac7cc08789225bd968027f6eb08d75312cb7
+  languageName: node
+  linkType: hard
+
+"conventional-commits-parser@npm:^3.2.3":
+  version: 3.2.3
+  resolution: "conventional-commits-parser@npm:3.2.3"
+  dependencies:
+    JSONStream: ^1.0.4
+    is-text-path: ^1.0.1
+    lodash: ^4.17.15
+    meow: ^8.0.0
+    split2: ^3.0.0
+    through2: ^4.0.0
+  bin:
+    conventional-commits-parser: cli.js
+  checksum: 07ac0ff0d11c1d44f772dc825e9232f8ee06e9f665115fa6ce7b1eb0802c76e0107fbcb8c5671679fabace7d2d7af8cd2f1c01c66bcde064eaee1f790e8df0b9
   languageName: node
   linkType: hard
 
@@ -8690,7 +8706,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.1.1, readable-stream@npm:^3.6.0":
+"readable-stream@npm:2 || 3, readable-stream@npm:3, readable-stream@npm:^3.0.0, readable-stream@npm:^3.1.1, readable-stream@npm:^3.6.0":
   version: 3.6.0
   resolution: "readable-stream@npm:3.6.0"
   dependencies:
@@ -9566,6 +9582,15 @@ fsevents@~2.1.2:
   dependencies:
     through2: ^2.0.2
   checksum: cf58dc8aa424499cd68a9e7d9ae94441ff972ce0c1f9599bef9d65b3f4384913c557eeec939ea34e2832309d90b6ad6993c5b51b152cba2f72500299464e6a9c
+  languageName: node
+  linkType: hard
+
+"split2@npm:^3.0.0":
+  version: 3.2.2
+  resolution: "split2@npm:3.2.2"
+  dependencies:
+    readable-stream: ^3.0.0
+  checksum: 04bf20af25bfe917edbb7f719cc9dbd2ca16633e4e6a5e343a8c834310aafd802c74b3aceb96acf3571545b0340d55d2d3273dbee8f9bc6a811371dcfbe0c8a7
   languageName: node
   linkType: hard
 
