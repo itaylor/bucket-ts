@@ -974,14 +974,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/release-notes-generator@npm:10.0.2":
-  version: 10.0.2
-  resolution: "@semantic-release/release-notes-generator@npm:10.0.2"
+"@semantic-release/release-notes-generator@npm:10.0.3":
+  version: 10.0.3
+  resolution: "@semantic-release/release-notes-generator@npm:10.0.3"
   dependencies:
     conventional-changelog-angular: ^5.0.0
     conventional-changelog-writer: ^5.0.0
     conventional-commits-filter: ^2.0.0
-    conventional-commits-parser: ^3.0.0
+    conventional-commits-parser: ^3.2.3
     debug: ^4.0.0
     get-stream: ^6.0.0
     import-from: ^4.0.0
@@ -990,7 +990,7 @@ __metadata:
     read-pkg-up: ^7.0.0
   peerDependencies:
     semantic-release: ">=18.0.0-beta.1"
-  checksum: 4bfbbbfe999985083d422dee4c61a5eec473d690ded1e052f878fc7a9e949202560b5a18f4566abb64ae957954e9b7fa8c0955114db1da897cf4514013c59f00
+  checksum: ec028908b9da6cc8346b38ee1147d7ff8ddaedf9f6b50c65dbaf13a23ca109f836b97126016fa7c1d44a955ac07ee3cff0b4d0b164e71505f8f2904724709e55
   languageName: node
   linkType: hard
 
@@ -2013,7 +2013,7 @@ __metadata:
     "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.2
     "@semantic-release/npm": 8.0.3
-    "@semantic-release/release-notes-generator": 10.0.2
+    "@semantic-release/release-notes-generator": 10.0.3
     multi-semantic-release: 2.11.0
     semantic-release: 18.0.1
     semantic-release-monorepo: 7.0.5
