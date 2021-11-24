@@ -761,7 +761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/commit-analyzer@npm:9.0.2":
+"@semantic-release/commit-analyzer@npm:9.0.2, @semantic-release/commit-analyzer@npm:^9.0.2":
   version: 9.0.2
   resolution: "@semantic-release/commit-analyzer@npm:9.0.2"
   dependencies:
@@ -792,23 +792,6 @@ __metadata:
   peerDependencies:
     semantic-release: ">=16.0.0 <18.0.0"
   checksum: d4ba07479c121a1c35f9105f8d4e4855dad1a3dfa5520cea366355cf86bf4b85695c1bb78244c2b90205ba79cf9acb01c40f3306564e63454a93d1e9907401ff
-  languageName: node
-  linkType: hard
-
-"@semantic-release/commit-analyzer@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "@semantic-release/commit-analyzer@npm:9.0.0"
-  dependencies:
-    conventional-changelog-angular: ^5.0.0
-    conventional-commits-filter: ^2.0.0
-    conventional-commits-parser: ^3.0.7
-    debug: ^4.0.0
-    import-from: ^3.0.0
-    lodash: ^4.17.4
-    micromatch: ^4.0.2
-  peerDependencies:
-    semantic-release: ">=18.0.0-beta.1"
-  checksum: 26a19891ad492f575b6044ffbb7be0ab3a66801446d786a6676f1102bf772c1f0a3575c2d19d5afbe25e25d8d8be7fb98719f841811439650b325b4cb14d187d
   languageName: node
   linkType: hard
 
@@ -2032,7 +2015,7 @@ __metadata:
     "@semantic-release/npm": 8.0.3
     "@semantic-release/release-notes-generator": 10.0.2
     multi-semantic-release: 2.11.0
-    semantic-release: 18.0.0
+    semantic-release: 18.0.1
     semantic-release-monorepo: 7.0.5
     typedoc: 0.17.0-3
     typescript: 4.1.5
@@ -9152,11 +9135,11 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:18.0.0":
-  version: 18.0.0
-  resolution: "semantic-release@npm:18.0.0"
+"semantic-release@npm:18.0.1":
+  version: 18.0.1
+  resolution: "semantic-release@npm:18.0.1"
   dependencies:
-    "@semantic-release/commit-analyzer": ^9.0.0
+    "@semantic-release/commit-analyzer": ^9.0.2
     "@semantic-release/error": ^3.0.0
     "@semantic-release/github": ^8.0.0
     "@semantic-release/npm": ^8.0.0
@@ -9186,7 +9169,7 @@ fsevents@~2.1.2:
     yargs: ^16.2.0
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: 36c952029948990960fa39db4e1b8b3c9aeab709d15ae94b2409bbd4e1574c49f430e51fb4860535cb760a8f67003957ae7f7f5ed891286a43d074ae53ba4714
+  checksum: f2457fded9dd0ddd20e9b29bb81cb8d143f2f083cc545df2a271e87ca4cf2de8ea16a2f2b49b7bb973cf90b713d1a92bd2adae976a4de465634342984b079241
   languageName: node
   linkType: hard
 
