@@ -949,9 +949,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semantic-release/npm@npm:9.0.0, @semantic-release/npm@npm:^9.0.0":
-  version: 9.0.0
-  resolution: "@semantic-release/npm@npm:9.0.0"
+"@semantic-release/npm@npm:9.0.1":
+  version: 9.0.1
+  resolution: "@semantic-release/npm@npm:9.0.1"
   dependencies:
     "@semantic-release/error": ^3.0.0
     aggregate-error: ^3.0.0
@@ -968,7 +968,7 @@ __metadata:
     tempy: ^1.0.0
   peerDependencies:
     semantic-release: ">=19.0.0"
-  checksum: 9cd8ac3060200389c1bb78da6ba74654edcffd3513051eade2b799b87ad59b069635ff77305364e176af81e4341bbb657b089080cd48d04fb6af961706a9a135
+  checksum: ec8d184c929a2ad73b32f891183c229c373c486a8cb44a64c4d1a3fa48438569eaa8b8d1514f8af762a9bffa097a6112e3a4ba734b231ca77e9c126096c57180
   languageName: node
   linkType: hard
 
@@ -992,6 +992,29 @@ __metadata:
   peerDependencies:
     semantic-release: ">=16.0.0 <18.0.0"
   checksum: 0c1996913fbc2f9bc8a83f55c3cad76231850d3de4dde8ce43a1a7a9c27184808228f33db2b8742ffed798154f2791d4e1bdb88868a53a4f79927b7858395668
+  languageName: node
+  linkType: hard
+
+"@semantic-release/npm@npm:^9.0.0":
+  version: 9.0.0
+  resolution: "@semantic-release/npm@npm:9.0.0"
+  dependencies:
+    "@semantic-release/error": ^3.0.0
+    aggregate-error: ^3.0.0
+    execa: ^5.0.0
+    fs-extra: ^10.0.0
+    lodash: ^4.17.15
+    nerf-dart: ^1.0.0
+    normalize-url: ^6.0.0
+    npm: ^8.3.0
+    rc: ^1.2.8
+    read-pkg: ^5.0.0
+    registry-auth-token: ^4.0.0
+    semver: ^7.1.2
+    tempy: ^1.0.0
+  peerDependencies:
+    semantic-release: ">=19.0.0"
+  checksum: 9cd8ac3060200389c1bb78da6ba74654edcffd3513051eade2b799b87ad59b069635ff77305364e176af81e4341bbb657b089080cd48d04fb6af961706a9a135
   languageName: node
   linkType: hard
 
@@ -2068,7 +2091,7 @@ __metadata:
     "@semantic-release/commit-analyzer": 9.0.2
     "@semantic-release/git": 10.0.1
     "@semantic-release/github": 8.0.2
-    "@semantic-release/npm": 9.0.0
+    "@semantic-release/npm": 9.0.1
     "@semantic-release/release-notes-generator": 10.0.3
     multi-semantic-release: 2.11.1
     semantic-release: 19.0.2
