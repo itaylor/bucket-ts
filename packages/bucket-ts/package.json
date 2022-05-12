@@ -15,7 +15,7 @@
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
-    "@types/node": "16.11.34",
+    "@types/node": "16.11.35",
     "@types/recursive-readdir": "2.2.1",
     "typescript": "4.1.5"
   }
