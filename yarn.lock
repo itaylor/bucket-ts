@@ -2093,7 +2093,7 @@ __metadata:
     "@semantic-release/github": 8.0.4
     "@semantic-release/npm": 9.0.1
     "@semantic-release/release-notes-generator": 10.0.3
-    multi-semantic-release: 2.12.0
+    multi-semantic-release: 2.13.0
     semantic-release: 19.0.2
     semantic-release-monorepo: 7.0.5
     typedoc: 0.17.0-3
@@ -3118,7 +3118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^4.1.0, debug@npm:^4.3.2":
+"debug@npm:^4.1.0":
   version: 4.3.2
   resolution: "debug@npm:4.3.2"
   dependencies:
@@ -3139,6 +3139,18 @@ __metadata:
     supports-color:
       optional: true
   checksum: 1bceffaa69207300c49f868643a4f637a20dd292fe005fb0d5a625957ee1fe7a4e65c5f4c6f65ce2b1ef30087cf4e327207d4e0554362e4c44574f85328e3b71
+  languageName: node
+  linkType: hard
+
+"debug@npm:^4.3.4":
+  version: 4.3.4
+  resolution: "debug@npm:4.3.4"
+  dependencies:
+    ms: 2.1.2
+  peerDependenciesMeta:
+    supports-color:
+      optional: true
+  checksum: 7d71c93be25ed05e85840ec12df1a6d1848adbf8bc66948017ad4120fed17d7889e305adec560c18d70710e6de0c55548fbed170f4355045bbbbbd2afd1532a2
   languageName: node
   linkType: hard
 
@@ -7213,14 +7225,14 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"multi-semantic-release@npm:2.12.0":
-  version: 2.12.0
-  resolution: "multi-semantic-release@npm:2.12.0"
+"multi-semantic-release@npm:2.13.0":
+  version: 2.13.0
+  resolution: "multi-semantic-release@npm:2.13.0"
   dependencies:
     "@manypkg/get-packages": ^1.1.3
     blork: ^9.3.0
     cosmiconfig: ^7.0.1
-    debug: ^4.3.2
+    debug: ^4.3.4
     detect-indent: ^6.1.0
     detect-newline: ^3.1.0
     execa: ^4.1.0
@@ -7231,13 +7243,13 @@ fsevents@~2.1.2:
     meow: ^8.1.2
     promise-events: ^0.2.4
     semantic-release: ^17.4.7
-    semver: ^7.3.5
+    semver: ^7.3.7
     signale: ^1.4.0
     stream-buffers: ^3.0.2
     unixify: ^1.0.0
   bin:
     multi-semantic-release: bin/cli.js
-  checksum: fd878384043427bfdbcff0ad8c493e012ee1e31fd46a83c5885136cbb6ba1800d92e2f4d9ebedbfcdbb5cb8fe1ce732d23311e67784018eb502e74d2a3506dc9
+  checksum: e0e954331decbf6dda299882b3ed049d1ad0e0aa6f0230eff967e84653f266a174c6bee016bb9f05669ddab0b0de7c072602f8c01c4157da569305d8139c958e
   languageName: node
   linkType: hard
 
@@ -9585,6 +9597,17 @@ fsevents@~2.1.2:
   bin:
     semver: bin/semver.js
   checksum: bceb46d396d039afb5be2b2860bce1b0a43ecbadc72dde7ebe9c56dd9035ca50d9b8e086208ff9bbe53773ebde0bcfc6fc0842d7358398bca7054bb9ced801e3
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.3.7":
+  version: 7.3.7
+  resolution: "semver@npm:7.3.7"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: a9e88cefbcf047c03988182d11bba5a3cacd5216da0803302988b4e8cf08a7cadab1f96d578712c20d906cf4f5f6e76cfa27ae21ac65f63d396015ffe1da1eed
   languageName: node
   linkType: hard
 
