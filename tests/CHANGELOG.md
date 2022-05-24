@@ -1,3 +1,13 @@
+## bucket-ts-test [1.0.4](https://github.com/itaylor/bucket-ts/compare/bucket-ts-test@1.0.3...bucket-ts-test@1.0.4) (2022-05-24)
+
+
+
+
+
+### Dependencies
+
+* **bucket-ts-gcs:** upgraded to 1.0.4
+
 ## bucket-ts-test [1.0.3](https://github.com/itaylor/bucket-ts/compare/bucket-ts-test@1.0.2...bucket-ts-test@1.0.3) (2021-03-27)
 
 
