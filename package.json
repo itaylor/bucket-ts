@@ -35,6 +35,6 @@
     "@semantic-release/release-notes-generator": "10.0.3",
     "semantic-release": "19.0.2",
     "semantic-release-monorepo": "7.0.5",
-    "typedoc": "0.17.0-3"
+    "typedoc": "0.26.10"
   }
 }
